@@ -36,15 +36,6 @@ class Tools
     protected $environment;
     protected $filepath;
     protected $storage;
-
-    protected $urls = [
-        '4202909' => [
-            'municipio' => 'Brusque',
-            'uf' => 'SC',
-            'tom' => '8055',
-            'sign' => true
-        ]
-    ];
     
     /**
      * Constructor
@@ -55,15 +46,19 @@ class Tools
     {
         $this->config = json_decode($config);
         $this->certificate = $cert;
-        $wsobj = $this->urls;
-        if (empty($this->urls[$this->config->cmun])) {
+        
+        $this->storage = realpath(__DIR__ . '/../../storage');
+        $urls = json_decode(
+            file_get_contents($this->storage . '/municipios_ipm.json'),
+            true
+        );
+        if (empty($urls[$this->config->cmun])) {
             throw new \Exception(
                 "Esse codigo [{$this->config->cmun}] não pertence a nenhum "
                 . "municipio cadastrado para esse modelo."
             );
         }
-        $this->wsobj = json_decode(json_encode($this->urls[$this->config->cmun]));
-        $this->storage = realpath(__DIR__ . '/../../storage');
+        $this->wsobj = json_decode(json_encode($urls[$this->config->cmun]));
         $this->environment = 'homologacao';
         if ($this->config->tpamb === 1) {
             $this->environment = 'producao';
