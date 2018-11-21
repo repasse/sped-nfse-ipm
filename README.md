@@ -41,6 +41,81 @@ Não deixe de se cadastrar no [grupo de discussão do NFePHP](http://groups.goog
 - nfephp-org/sped-common
 - justinrainbow/json-schema
 
+### Municipos Atendidos pelo modelo IPM
+
+Os dados cadastrais dos municipios estão em [storage/municipios_ipm.json](storage/municipios_ipm.json)
+
+. Arapongas - PR
+. Campo Largo - PR
+. Castro - PR 
+. Campo Mourão - PR
+. Colombo - PR
+. Enéas Marques - PR
+. Guaíra - PR
+. Janiópolis - PR
+. Mamborê - PR
+. Maripa - PR
+. Mercedes - PR
+. Nova Cantu - PR
+. Paranaguá - PR
+. Pinhais - PR
+. Santa Helena - PR
+. Telêmaco Borba - PR
+. Terra Boa - PR
+. Terra Roxa - PR
+. Tibagi - PR
+. Agrolândia - SC
+. Apiúna - SC
+. Araquari - SC
+. Ascurra - SC
+. Aurora  - SC
+. Balneário Barra do Sul - SC
+. Balneário Piçarras - SC
+. Barra Velha - SC
+. Benedito Novo - SC
+. Biguaçu - SC
+. Brusque - SC
+. Concórdia - SC
+. Doutor Pedrinho - SC
+. Garuva - SC
+. Guabiruba - SC
+. Guaramirim - SC
+. Ibirama - SC
+. Indaial - SC
+. Iporã do Oeste - SC
+. Itapoá - SC
+. Ituporanga - SC
+. José Boiteux - SC
+. Laurentino - SC
+. Lontras - SC
+. Massaranduba - SC
+. Ouro - SC
+. Palhoça - SC
+. Pomerode - SC
+. Presidente Getúlio - SC
+. Rio das Antas - SC
+. Rio do Oeste - SC
+. Rio dos Cedros - SC
+. Rio do Sul - SC
+. Roderio - SC
+. Salete - SC
+. São Francisco do Sul - SC
+. Taió - SC
+. Timbó - SC
+. Três Barras - SC
+. Videira - SC
+. Vitor Meireles - SC
+. Witmarsum - SC
+. Candelária - RS
+. Estrela - RS
+. Estrela Velha - RS
+. Gravataí - RS
+. Igrejinha - RS
+. Panambi - RS
+. Parobé - RS
+. Santa Rosa - RS 
+. Sobradinho - RS
+
 
 ## Contribuindo
 Este é um projeto totalmente *OpenSource*, para usa-lo e modifica-lo você não paga absolutamente nada. Porém para continuarmos a mante-lo é necessário qua alguma contribuição seja feita, seja auxiliando na codificação, na documentação ou na realização de testes e identificação de falhas e BUGs.

@@ -1,0 +1,422 @@
+{
+    "4101507": {
+        "municipio": "ARAPONGAS",
+        "uf": "PR",
+        "tom": "7427",
+        "sign": true
+    },
+    "4104204": {
+        "municipio": "CAMPO LARGO",
+        "uf": "PR",
+        "tom": "7481",
+        "sign": true
+    },
+    "4104907": {
+        "municipio": "CASTRO",
+        "uf": "PR",
+        "tom": "7495",
+        "sign": true
+    },
+    "4104303": {
+        "municipio": "CAMPO MOURAO",
+        "uf": "PR",
+        "tom": "7483",
+        "sign": true
+    },
+    "4105805": {
+        "municipio": "COLOMBO",
+        "uf": "PR",
+        "tom": "7513",
+        "sign": true
+    },
+    "4107405": {
+        "municipio": "ENEAS MARQUES",
+        "uf": "PR",
+        "tom": "7545",
+        "sign": true
+    },
+    "4108809": {
+        "municipio": "GUAIRA",
+        "uf": "PR",
+        "tom": "7571",
+        "sign": true
+    },
+    "4112207": {
+        "municipio": "JANIOPOLIS",
+        "uf": "PR",
+        "tom": "7637",
+        "sign": true
+    },
+    "4114005": {
+        "municipio": "MAMBORE",
+        "uf": "PR",
+        "tom": "7673",
+        "sign": true
+    },
+    "4115358": {
+        "municipio": "MARIPA",
+        "uf": "PR",
+        "tom": "5487",
+        "sign": true
+    },
+    "4115853": {
+        "municipio": "MERCEDES",
+        "uf": "PR",
+        "tom": "5531",
+        "sign": true
+    },
+    "4116802": {
+        "municipio": "NOVA CANTU",
+        "uf": "PR",
+        "tom": "7719",
+        "sign": true
+    },
+    "4118204": {
+        "municipio": "PARANAGUA",
+        "uf": "PR",
+        "tom": "7745",
+        "sign": true
+    },
+    "4119152": {
+        "municipio": "PINHAIS",
+        "uf": "PR",
+        "tom": "5453",
+        "sign": true
+    },
+    "4123501": {
+        "municipio": "SANTA HELENA",
+        "uf": "PR",
+        "tom": "7971",
+        "sign": true
+    },
+    "4127106": {
+        "municipio": "TELEMACO BORBA",
+        "uf": "PR",
+        "tom": "7915",
+        "sign": true
+    },
+    "4127205": {
+        "municipio": "TERRA BOA",
+        "uf": "PR",
+        "tom": "7917",
+        "sign": true
+    },
+    "4127403": {
+        "municipio": "TERRA ROXA",
+        "uf": "PR",
+        "tom": "7921",
+        "sign": true
+    },
+    "4127502": {
+        "municipio": "TIBAGI",
+        "uf": "PR",
+        "tom": "7923",
+        "sign": true
+    },
+    "4200200": {
+        "municipio": "AGROLANDIA",
+        "uf": "SC",
+        "tom": "8003",
+        "sign": true
+    },
+    "4201257": {
+        "municipio": "APIUNA",
+        "uf": "SC",
+        "tom": "9941",
+        "sign": true
+    },
+    "4201307": {
+        "municipio": "ARAQUARI",
+        "uf": "SC",
+        "tom": "8025",
+        "sign": true
+    },
+    "4201703": {
+        "municipio": "ASCURRA",
+        "uf": "SC",
+        "tom": "8033",
+        "sign": true
+    },
+    "4201901": {
+        "municipio": "AURORA",
+        "uf": "SC",
+        "tom": "8037",
+        "sign": true
+    },
+    "4202057": {
+        "municipio": "BALNEARIO BARRA DO SUL",
+        "uf": "SC",
+        "tom": "5549",
+        "sign": true
+    },
+    "4212809": {
+        "municipio": "BALNEARIO PICARRAS",
+        "uf": "SC",
+        "tom": "0000",
+        "sign": true
+    },
+    "4202107": {
+        "municipio": "BARRA VELHA",
+        "uf": "SC",
+        "tom": "8041",
+        "sign": true
+    },
+    "4202206": {
+        "municipio": "BENEDITO NOVO",
+        "uf": "SC",
+        "tom": "8043",
+        "sign": true
+    },
+    "4202305": {
+        "municipio": "BIGUACU",
+        "uf": "SC",
+        "tom": "8045",
+        "sign": true
+    },
+    "4202909": {
+        "municipio": "BRUSQUE",
+        "uf": "SC",
+        "tom": "8055",
+        "sign": true
+    },
+    "4204301": {
+        "municipio": "CONCORDIA",
+        "uf": "SC",
+        "tom": "8083",
+        "sign": true
+    },
+    "4205159": {
+        "municipio": "DOUTOR PEDRINHO",
+        "uf": "SC",
+        "tom": "9945",
+        "sign": true
+    },
+    "4205803": {
+        "municipio": "GARUVA",
+        "uf": "SC",
+        "tom": "8115",
+        "sign": true
+    },
+    "4206306": {
+        "municipio": "GUABIRUBA",
+        "uf": "SC",
+        "tom": "8123",
+        "sign": true
+    },
+    "4206504": {
+        "municipio": "GUARAMIRIM",
+        "uf": "SC",
+        "tom": "8127",
+        "sign": true
+    },
+    "4206900": {
+        "municipio": "IBIRAMA",
+        "uf": "SC",
+        "tom": "8135",
+        "sign": true
+    },
+    "4207502": {
+        "municipio": "INDAIAL",
+        "uf": "SC",
+        "tom": "8147",
+        "sign": true
+    },
+    "4207650": {
+        "municipio": "IPORA DO OESTE",
+        "uf": "SC",
+        "tom": "9951",
+        "sign": true
+    },
+    "4208450": {
+        "municipio": "ITAPOA",
+        "uf": "SC",
+        "tom": "9985",
+        "sign": true
+    },
+    "4208500": {
+        "municipio": "ITUPORANGA",
+        "uf": "SC",
+        "tom": "8167",
+        "sign": true
+    },
+    "4209151": {
+        "municipio": "JOSE BOITEUX",
+        "uf": "SC",
+        "tom": "9957",
+        "sign": true
+    },
+    "4209508": {
+        "municipio": "LAURENTINO",
+        "uf": "SC",
+        "tom": "8187",
+        "sign": true
+    },
+    "4209904": {
+        "municipio": "LONTRAS",
+        "uf": "SC",
+        "tom": "8195",
+        "sign": true
+    },
+    "4210605": {
+        "municipio": "MASSARANDUBA",
+        "uf": "SC",
+        "tom": "8207",
+        "sign": true
+    },
+    "4211801": {
+        "municipio": "OURO",
+        "uf": "SC",
+        "tom": "8231",
+        "sign": true
+    },
+    "4211900": {
+        "municipio": "PALHOCA",
+        "uf": "SC",
+        "tom": "8233",
+        "sign": true
+    },
+    "4213203": {
+        "municipio": "POMERODE",
+        "uf": "SC",
+        "tom": "8259",
+        "sign": true
+    },
+    "4214003": {
+        "municipio": "PRESIDENTE GETULIO",
+        "uf": "SC",
+        "tom": "8275",
+        "sign": true
+    },
+    "4214409": {
+        "municipio": "RIO DAS ANTAS",
+        "uf": "SC",
+        "tom": "8283",
+        "sign": true
+    },
+    "4214607": {
+        "municipio": "RIO DO OESTE",
+        "uf": "SC",
+        "tom": "8287",
+        "sign": true
+    },
+    "4214706": {
+        "municipio": "RIO DOS CEDROS",
+        "uf": "SC",
+        "tom": "8289",
+        "sign": true
+    },
+    "4214805": {
+        "municipio": "RIO DO SUL",
+        "uf": "SC",
+        "tom": "8291",
+        "sign": true
+    },
+    "0000000": {
+        "municipio": "RODERIO",
+        "uf": "SC",
+        "tom": "0000",
+        "sign": true
+    },
+    "4215307": {
+        "municipio": "SALETE",
+        "uf": "SC",
+        "tom": "8301",
+        "sign": true
+    },
+    "4216206": {
+        "municipio": "SAO FRANCISCO DO SUL",
+        "uf": "SC",
+        "tom": "8319",
+        "sign": true
+    },
+    "4217808": {
+        "municipio": "TAIO",
+        "uf": "SC",
+        "tom": "8351",
+        "sign": true
+    },
+    "4218202": {
+        "municipio": "TIMBO",
+        "uf": "SC",
+        "tom": "8357",
+        "sign": true
+    },
+    "4218301": {
+        "municipio": "TRES BARRAS",
+        "uf": "SC",
+        "tom": "8359",
+        "sign": true
+    },
+    "4219309": {
+        "municipio": "VIDEIRA",
+        "uf": "SC",
+        "tom": "8379",
+        "sign": true
+    },
+    "4219358": {
+        "municipio": "VITOR MEIRELES",
+        "uf": "SC",
+        "tom": "9977",
+        "sign": true
+    },
+    "4219408": {
+        "municipio": "WITMARSUM",
+        "uf": "SC",
+        "tom": "8381",
+        "sign": true
+    },
+    "4304200": {
+        "municipio": "CANDELARIA",
+        "uf": "RS",
+        "tom": "8581",
+        "sign": true
+    },
+    "4307807": {
+        "municipio": "ESTRELA",
+        "uf": "RS",
+        "tom": "8653",
+        "sign": true
+    },
+    "4307815": {
+        "municipio": "ESTRELA VELHA",
+        "uf": "RS",
+        "tom": "0982",
+        "sign": true
+    },
+    "4309209": {
+        "municipio": "GRAVATAI",
+        "uf": "RS",
+        "tom": "8683",
+        "sign": true
+    },
+    "4310108": {
+        "municipio": "IGREJINHA",
+        "uf": "RS",
+        "tom": "8703",
+        "sign": true
+    },
+    "4313904": {
+        "municipio": "PANAMBI",
+        "uf": "RS",
+        "tom": "8781",
+        "sign": true
+    },
+    "4314050": {
+        "municipio": "PAROBE",
+        "uf": "RS",
+        "tom": "9825",
+        "sign": true
+    },
+    "4317202": {
+        "municipio": "SANTA ROSA",
+        "uf": "RS",
+        "tom": "8847",
+        "sign": true
+    },
+    "4320701": {
+        "municipio": "SOBRADINHO",
+        "uf": "RS",
+        "tom": "8917",
+        "sign": true
+    }
+}
