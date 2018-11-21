@@ -35,7 +35,8 @@ class Tools
     protected $soap;
     protected $environment;
     protected $filepath;
-    
+    protected $storage;
+
     protected $urls = [
         '4202909' => [
             'municipio' => 'Brusque',
@@ -76,7 +77,7 @@ class Tools
     {
         if (is_file($this->filepath)) {
             unlink($this->filepath);
-        }    
+        }
     }
     
     /**
@@ -161,7 +162,6 @@ class Tools
             $httpcode = curl_getinfo($oCurl, CURLINFO_HTTP_CODE);
             $responseHead = trim(substr($response, 0, $headsize));
             curl_close($oCurl);
-            
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
@@ -178,7 +178,7 @@ class Tools
     }
     
     /**
-     * Response for FAKE 
+     * Response for FAKE
      * @return string
      */
     protected function fakeResponse()

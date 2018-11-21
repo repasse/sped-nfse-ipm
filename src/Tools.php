@@ -43,7 +43,7 @@ class Tools extends BaseTools
      * @param string $cadastro
      * @return string
      */
-    public function consulta($codigo = null, $numero = null, $serie = null, $cadastro = null): string
+    public function consultar($codigo = null, $numero = null, $serie = null, $cadastro = null): string
     {
         $content = "<nfse>"
             . "<pesquisa>";

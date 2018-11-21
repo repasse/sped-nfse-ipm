@@ -2,9 +2,7 @@
 
 Api para comunicação com webservices do Modelo IPM
 
-## ALPHA TESTES
-
-*Utilize o chat do Gitter para iniciar discussões especificas sobre o desenvolvimento deste pacote.*
+## ALPHA TESTES (não foram feitos testes reais até o momento)
 
 [![Latest Stable Version][ico-stable]][link-packagist]
 [![Build Status][ico-travis]][link-travis]
