@@ -72,7 +72,7 @@ class Rps implements RpsInterface
     }
     
     /**
-     * Mark as test 
+     * Mark as test
      * @param bool $flag
      */
     public function teste($flag = true)
