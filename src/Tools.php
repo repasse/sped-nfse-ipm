@@ -45,17 +45,15 @@ class Tools extends BaseTools
      */
     public function consultar($codigo = null, $numero = null, $serie = null, $cadastro = null): string
     {
-        $content = "<nfse>"
-            . "<pesquisa>";
+        $content = "<nfse><pesquisa>";
         if (!empty($codigo)) {
-            $content = "<codigo_autenticidade>$codigo</codigo_autenticidade>";
+            $content .= "<codigo_autenticidade>$codigo</codigo_autenticidade>";
         } elseif (!empty($numero) && !empty($serie) && !empty($cadastro)) {
-            $content = "<numero>$numero</numero>"
-               . "<serie>$serie</serie>";
-            $content = "<cadastro>$cadastro</cadastro>";
+            $content .= "<numero>$numero</numero>"
+               . "<serie>$serie</serie>"
+               . "<cadastro>$cadastro</cadastro>";
         }
-        $content = "</pesquisa>"
-            . "<nfse>";
+        $content .= "</pesquisa><nfse>";
         return $this->send($content);
     }
     
