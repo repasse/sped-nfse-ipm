@@ -35,21 +35,8 @@ class Standardize
      * @var array
      */
     public $rootTagList = [
-        'CancelarNfseEnvio',
-        'ConsultarLoteRpsEnvio',
-        'ConsultarNfseEnvio',
-        'ConsultarNfseFaixaEnvio',
-        'ConsultarNfseRpsEnvio',
-        'EnviarLoteRpsEnvio',
-        'GerarNfseEnvio',
-        'CancelarNfseResposta',
-        'ConsultarLoteRpsResposta',
-        'ConsultarNfseResposta',
-        'ConsultarNfseFaixaResposta',
-        'ConsultarNfseRpsResposta',
-        'EnviarLoteRpsResposta',
-        'GerarNfseEnvio',
-        'RPS'
+        'retorno',
+        'nfse'
     ];
     
     public function __construct($xml = null)
