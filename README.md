@@ -54,6 +54,7 @@ Os dados cadastrais dos municipios estão em [storage/municipios_ipm.json](stora
 - Guaíra - PR
 - Janiópolis - PR
 - Mamborê - PR
+- Marechal Candido Rondon - PR
 - Maripa - PR
 - Mercedes - PR
 - Nova Cantu - PR
