@@ -16,8 +16,11 @@ try {
         'im'    => '1733160024',
         'cmun'  => '4202909', //ira determinar as urls e outros dados
         'razao' => 'Empresa Test Ltda',
-        'tpamb' => 3 //1-producao, 2-homologacao, 3-Fake
+        'tpamb' => 2 //1-producao, 2-homologacao, 3-Fake
     ];
+    
+    //Consulte a prefeitura para saber se a assinatura é obrigatoria
+    //se não for abra um ISSUE no repositório
 
     $configJson = json_encode($config);
 
@@ -29,7 +32,7 @@ try {
 
     $std = new \stdClass();
     
-    $std->identificador = '1234';
+    $std->identificador = '1234'; //opcional
 
 //consulte a Prefeitura para determinar se o RPS é necessário
     $std->rps = new \stdClass(); //não obrigatorio
@@ -111,8 +114,8 @@ try {
     $rps = new Rps($std);
     
     $response = $tools->enviar($rps);
-
-    header("Content-type: text/xml");
+    
+    header('Content-Type: application/xml; charset=iso-8859-1');
     echo $response;
     
 } catch (\Exception $e) {

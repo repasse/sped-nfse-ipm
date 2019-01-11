@@ -27,7 +27,7 @@ try {
 
     $tools = new Tools($configJson, $cert);
  
-    $codigo = '12345678'; //codigo de autenticidade
+    $codigo = '01234567890123'; //codigo de autenticidade
     $numero = null; //'123'; //numero da NFSe
     $serie = null; //'1'; //serie da NFSe
     $cadastro = null; //'1733160024'; //numero do cadastro do contribuinte
