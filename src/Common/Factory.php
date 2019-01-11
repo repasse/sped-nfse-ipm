@@ -372,7 +372,7 @@ class Factory
             );
             $this->dom->addChild(
                 $node,
-                "unidade_quantidade",
+                "unidade_valor_unitario",
                 isset($item->unidade_valor_unitario) ? number_format($item->unidade_valor_unitario, 2, ',', '') : null,
                 false
             );
