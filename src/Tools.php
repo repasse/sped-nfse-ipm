@@ -67,18 +67,16 @@ class Tools extends BaseTools
     {
         $operation = 'enviar';
         if ($this->config->tpamb > 1 && $this->config->tpamb < 3) {
-            $rps->teste(true);
+            $rps->teste(true); //marca xml como teste não será considerado pelo servidor
         }
+        $content = $rps->render();
         //assina se necessário
         if ($this->wsobj->sign) {
             $rps->sign($this->wsobj->sign);
-            $content = $rps->render();
             $content = Signer::sign(
                 $this->certificate,
                 $content
             );
-        } else {
-            $content = $rps->render();
         }
         return $this->send($content, $operation);
     }

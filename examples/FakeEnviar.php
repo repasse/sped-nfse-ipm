@@ -20,6 +20,10 @@ try {
         'tpamb' => 3 //1-producao, 2-homologacao, 3-Fake
     ];
     
+    //NOTA: se 1-produção a NFSe será enviada
+    //      se 2-homologação a NFSe será enviada, mas marcada como teste
+    //      se 3-Fake NFSe NÃO SERÁ enviada e o XML da solicitação será retornado
+    
     //Consulte a prefeitura para saber se a assinatura é obrigatoria
     //se não for abra um ISSUE no repositório
 
