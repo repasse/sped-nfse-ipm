@@ -7,16 +7,17 @@ require_once '../bootstrap.php';
 use NFePHP\Common\Certificate;
 use NFePHP\NFSeIPM\Tools;
 use NFePHP\NFSeIPM\Rps;
+use NFePHP\NFSeIPM\Common\FakePretty;
 
 try {
 
     $config = [
-        'cnpj'  => '99999999000191',
+        'cnpj'  => '83270397000592',
         'senha' => 'secreta',
         'im'    => '1733160024',
         'cmun'  => '4202909', //ira determinar as urls e outros dados
         'razao' => 'Empresa Test Ltda',
-        'tpamb' => 2 //1-producao, 2-homologacao, 3-Fake
+        'tpamb' => 3 //1-producao, 2-homologacao, 3-Fake
     ];
     
     //Consulte a prefeitura para saber se a assinatura é obrigatoria
@@ -32,68 +33,68 @@ try {
 
     $std = new \stdClass();
     
-    $std->identificador = '1234'; //opcional
+    //$std->identificador = '1234'; //opcional
 
 //consulte a Prefeitura para determinar se o RPS é necessário
-    $std->rps = new \stdClass(); //não obrigatorio
-    $std->rps->nro_recibo_provisorio = 12; //obrigatorio
-    $std->rps->serie_recibo_provisorio = 1; //obrigatorio
-    $std->rps->data_emissao_recibo_provisorio = '18/11/2013'; //obrigatorio
-    $std->rps->hora_emissao_recibo_provisorio = '13:30:05'; //obrigatorio
+    //$std->rps = new \stdClass(); //não obrigatorio
+    //$std->rps->nro_recibo_provisorio = 12; //obrigatorio
+    //$std->rps->serie_recibo_provisorio = 1; //obrigatorio
+    //$std->rps->data_emissao_recibo_provisorio = '18/11/2013'; //obrigatorio
+    //$std->rps->hora_emissao_recibo_provisorio = '13:30:05'; //obrigatorio
 
-    $std->pedagio = new \stdClass(); //não obrigatorio
-    $std->pedagio->cod_equipamento_automatico = 'ABX253661'; //obrigatorio
+    //$std->pedagio = new \stdClass(); //não obrigatorio
+    //$std->pedagio->cod_equipamento_automatico = 'ABX253661'; //obrigatorio
 
     $std->nf = new \stdClass(); //obrigatorio
 //$std->nf->numero = "123456"; //somente preencher em caso de cancelamento
-    $std->nf->valor_total = 100.00; //obrigatorio
+    $std->nf->valor_total = 34.68; //obrigatorio
     $std->nf->valor_desconto = 0.00; //opcional
     $std->nf->valor_ir = 0.00; //opcional
     $std->nf->valor_inss = 0.00; //opcional
     $std->nf->valor_contribuicao_social = 0.00; //opcional
-    $std->nf->valor_rps = 0.00; //opcional
+    $std->nf->valor_rps = 34.68; //opcional
     $std->nf->valor_pis = 0.00; //opcional
     $std->nf->valor_cofins = 0.00; //opcional
-    $std->nf->observacao = 'observacao'; //descreve também  o motivo de cancelamento  //opcional
+    $std->nf->observacao = 'PRESTACAO DE SERVICO\r\nTrib Aprox R$ 4,68 Federal e 1,36 Municipal Fonte: IBPT/FECOMERCIO RS-Valor Liquido da Nota Fiscal - R$ 34,68\r\nCondicoes de Pagamento: GARANTIA\r\n\r\n\r\nContato: 733518 - Depto: 04 - Vendedor: 0538-JONATHAN NAZARIO DE OLIVEIRA\r\nO.S.: 161463 - Placa: MKU8017 - Chassi: 9BWAG4123FT522156 - Modelo: VW/UP TAKE MA - KM: 21054 - \r\nDN : 1220 - Despesas de Garantia do Fabricante'; //descreve também  o motivo de cancelamento  //opcional
 
     $std->prestador = new \stdClass(); //obrigatorio
-    $std->prestador->cpfcnpj = '22222222000191'; //obrigatorio
+    $std->prestador->cpfcnpj = '83270397000592'; //obrigatorio
     $std->prestador->cidade = '8291'; //codigo TOM do municipio vide WEBTOM  //opcional
 
     $std->tomador = new \stdClass(); //obrigatorio
-    $std->tomador->endereco_informado = 'N'; //S ou N opcional
-    $std->tomador->tipo = 'F'; //obrigatorio F ou J ou E
+    //$std->tomador->endereco_informado = 'N'; //S ou N opcional
+    $std->tomador->tipo = 'J'; //obrigatorio F ou J ou E
 //$std->tomador->identificador = '292929292' //opcional Número do cartão de identificação estrangeira ou passaporte.
 //$std->tomador->estado = 'New York'; //opcional Somente informar quando o tipo do tomador for E (estrangeiro)
 //$std->tomador->pais = 'EUA'; //opcional Somente informar quando o tipo do tomador for E (estrangeiro)
-    $std->tomador->cpfcnpj = '00062279342'; //opcional
-    $std->tomador->ie = '1234567'; //opcional
-    $std->tomador->nome_razao_social = 'Nome do Tomador de serviço'; //opcional
-    $std->tomador->sobrenome_nome_fantasia = 'tomador'; //opcional
-    $std->tomador->logradouro = 'Rua teste'; //opcional
-    $std->tomador->email = 'email@dominio.com.br'; //opcional
-    $std->tomador->numero_residencia = '893'; //opcional
-    $std->tomador->complemento = 'sobreloja'; //opcional
-    $std->tomador->ponto_referencia = 'prox quitanda do zezinho'; //opcional
-    $std->tomador->bairro = 'Centro'; //opcional
-    $std->tomador->cidade = '8291'; //opcional
-    $std->tomador->cep = '89160000'; //opcional
-    $std->tomador->ddd_fone_comercial = '123'; //opcional
-    $std->tomador->fone_comercial = '1234567'; //opcional
-    $std->tomador->ddd_fone_residencial = '123'; //opcional
-    $std->tomador->fone_residencial = '987654321'; //opcional
-    $std->tomador->ddd_fax = '123'; //opcional
-    $std->tomador->fone_fax = '88888888'; //opcional
+    $std->tomador->cpfcnpj = '59104422005704'; //opcional
+    $std->tomador->ie = ''; //opcional
+    $std->tomador->nome_razao_social = 'VOLKSWAGEN DO BRASIL INDUSTRIA DE VEICULOS AUTOMOTORES LTDA'; //opcional
+    $std->tomador->sobrenome_nome_fantasia = 'VOLKSWAGEN DO BRASIL INDUSTRIA DE VEICULOS AUTOMOTORES LTDA'; //opcional
+    $std->tomador->logradouro = 'MARGINAL DA VIA ANCHIETA SN KM'; //opcional
+    $std->tomador->email = 'centralnfe@volkswagen.com.br'; //opcional
+    $std->tomador->numero_residencia = '5'; //opcional
+    $std->tomador->complemento = ''; //opcional
+    $std->tomador->ponto_referencia = ''; //opcional
+    $std->tomador->bairro = 'DEMARCHI'; //opcional
+    $std->tomador->cidade = ''; //opcional
+    $std->tomador->cep = '19823901'; //opcional
+    $std->tomador->ddd_fone_comercial = '11'; //opcional
+    $std->tomador->fone_comercial = '43474796'; //opcional
+    $std->tomador->ddd_fone_residencial = '11'; //opcional
+    $std->tomador->fone_residencial = '43474796'; //opcional
+    $std->tomador->ddd_fax = '11'; //opcional
+    $std->tomador->fone_fax = '43474796'; //opcional
 
     $std->itens[0] = new \stdClass(); //obrigatorio
     $std->itens[0]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
     $std->itens[0]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
-    $std->itens[0]->unidade_codigo = '01212'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
-    $std->itens[0]->unidade_quantidade = 1.00; //opcional 
-    $std->itens[0]->unidade_valor_unitario = 100.00; //opcional 
-    $std->itens[0]->codigo_item_lista_servico = '702'; //obrigatorio Lei Complementar 116/2003
-    $std->itens[0]->descritivo = 'descritivo do servico realizado'; //obrigatorio
-    $std->itens[0]->aliquota_item_lista_servico = 2.00; //obrigatorio
+    $std->itens[0]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
+    $std->itens[0]->descritivo = 'AP.COMANDO REDE EL.BORDO PROGR'; //obrigatorio
+    $std->itens[0]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
+    $std->itens[0]->unidade_quantidade = 0.13; //opcional 
+    $std->itens[0]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[0]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[0]->situacao_tributaria = '0'; //
     //0 - Tributada Integralmente: o valor do imposto será lançado para o emissor da nota.
     //1 - Tributada Integralmente com ISSRF: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso seja órgão público municipal.
@@ -108,15 +109,81 @@ try {
     //10 - Não Tributada - ISS Construção Civil recolhido antecipadamente: não irá gerar valor de imposto, pois foi recolhido antecipadamente (esta situação tributária somente se aplica, caso os serviços consignados sejam os de código 1701, 1702, 1703, 1705, 1719).
     //15 - Não Tributada - Ato Cooperado: não irá gerar valor do imposto, pois a prestação de serviço para cooperados não está sujeita ao ISS; porém, mesmo que cooperativa e caso o serviço seja prestado para um não cooperado, deve- se utilizar das outras situações tributárias, de acordo com o caso.
 
-    $std->itens[0]->valor_tributavel = 100.00; //obrigatorio
-    $std->itens[0]->valor_deducao = 0.00; //opcional
+    $std->itens[0]->valor_tributavel = 14.09; //obrigatorio
+    $std->itens[0]->valor_deducao = 0; //opcional
     $std->itens[0]->valor_issrf = 0.00; //opcional
+    
+    $std->itens[1] = new \stdClass(); //obrigatorio
+    $std->itens[1]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
+    $std->itens[1]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
+    $std->itens[1]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
+    $std->itens[1]->descritivo = 'BATERIA CARREGADO/A/OS/AS'; //obrigatorio
+    $std->itens[1]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
+    $std->itens[1]->unidade_quantidade = 0.03; //opcional 
+    $std->itens[1]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[1]->aliquota_item_lista_servico = 4.00; //obrigatorio
+    $std->itens[1]->situacao_tributaria = '0'; //
+    $std->itens[1]->valor_tributavel = 3.25; //obrigatorio
+    $std->itens[1]->valor_deducao = 0; //opcional
+    $std->itens[1]->valor_issrf = 0.00; //opcional
+    
+    $std->itens[2] = new \stdClass(); //obrigatorio
+    $std->itens[2]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
+    $std->itens[2]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
+    $std->itens[2]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
+    $std->itens[2]->descritivo = 'TAMPA DESM.+MONT.'; //obrigatorio
+    $std->itens[2]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
+    $std->itens[2]->unidade_quantidade = 0.03; //opcional 
+    $std->itens[2]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[2]->aliquota_item_lista_servico = 4.00; //obrigatorio
+    $std->itens[2]->situacao_tributaria = '0'; //
+    $std->itens[2]->valor_tributavel = 3.25; //obrigatorio
+    $std->itens[2]->valor_deducao = 0; //opcional
+    $std->itens[2]->valor_issrf = 0.00; //opcional
+
+    $std->itens[2] = new \stdClass(); //obrigatorio
+    $std->itens[2]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
+    $std->itens[2]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
+    $std->itens[2]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
+    $std->itens[2]->descritivo = 'TAMPA DESM.+MONT.'; //obrigatorio
+    $std->itens[2]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
+    $std->itens[2]->unidade_quantidade = 0.03; //opcional 
+    $std->itens[2]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[2]->aliquota_item_lista_servico = 4.00; //obrigatorio
+    $std->itens[2]->situacao_tributaria = '0'; //
+    $std->itens[2]->valor_tributavel = 3.25; //obrigatorio
+    $std->itens[2]->valor_deducao = 0; //opcional
+    $std->itens[2]->valor_issrf = 0.00; //opcional
+    
+    $std->itens[3] = new \stdClass(); //obrigatorio
+    $std->itens[3]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
+    $std->itens[3]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
+    $std->itens[3]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
+    $std->itens[3]->descritivo = 'TAMPA REMOV.+INST.'; //obrigatorio
+    $std->itens[3]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
+    $std->itens[3]->unidade_quantidade = 0.13; //opcional 
+    $std->itens[3]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[3]->aliquota_item_lista_servico = 4.00; //obrigatorio
+    $std->itens[3]->situacao_tributaria = '0'; //
+    $std->itens[3]->valor_tributavel = 14.09; //obrigatorio
+    $std->itens[3]->valor_deducao = 0; //opcional
+    $std->itens[3]->valor_issrf = 0.00; //opcional
+    
+    $std->genericos[0] = new \stdClass();
+    $std->genericos[0]->titulo = '';
+    $std->genericos[0]->descricao = '';
+    
+    $std->produtos[0] = new \stdClass();
+    $std->produtos[0]->descricao = '';
+    $std->produtos[0]->valor = '';
+    
     $rps = new Rps($std);
     
     $response = $tools->enviar($rps);
     
     header('Content-Type: application/xml; charset=iso-8859-1');
     echo $response;
+    //echo FakePretty::prettyPrint($response, '');
     
 } catch (\Exception $e) {
     echo $e->getMessage();
