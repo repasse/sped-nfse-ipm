@@ -17,8 +17,8 @@ class Signer2
         $objDSig = new XMLSecurityDSig('');
         $objDSig->setCanonicalMethod(XMLSecurityDSig::C14N);
         $objDSig->addReference(
-            $doc, 
-            XMLSecurityDSig::SHA1, 
+            $doc,
+            XMLSecurityDSig::SHA1,
             array('http://www.w3.org/2000/09/xmldsig#enveloped-signature')
         );
         $objKey = new XMLSecurityKey(XMLSecurityKey::RSA_SHA1, array('type'=>'private'));

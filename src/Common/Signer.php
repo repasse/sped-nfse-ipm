@@ -349,7 +349,7 @@ class Signer
      * @param array $canonical
      * @return string
      */
-    private static function canonize(DOMDocument $dom,DOMNode $node, $canonical = self::CANONICAL)
+    private static function canonize(DOMDocument $dom, DOMNode $node, $canonical = self::CANONICAL)
     {
         if (empty($canonical)) {
             return $node->C14N();

@@ -422,7 +422,7 @@ class Factory
             $itens->appendChild($node);
         }
         $this->rps->appendChild($itens);
-        foreach($this->std->genericos as $generico) {
+        foreach ($this->std->genericos as $generico) {
             $genericos = $this->dom->createElement('genericos');
             $lista = $this->dom->createElement('lista');
             $this->dom->addChild(
@@ -440,7 +440,7 @@ class Factory
             $genericos->appendChild($lista);
             $this->rps->appendChild($genericos);
         }
-        foreach($this->std->produtos as $produto) {
+        foreach ($this->std->produtos as $produto) {
             $produtos = $this->dom->createElement('produtos');
             $this->dom->addChild(
                 $produtos,
