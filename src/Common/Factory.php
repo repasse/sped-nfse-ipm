@@ -47,13 +47,13 @@ class Factory
     public function __construct(stdClass $std, $sign = false, $teste = false)
     {
         $this->std = $std;
-        $this->dom = new Dom('1.0', 'ISO-8859-1');
+        $this->dom = new Dom('1.0', 'UTF-8');
         $this->dom->preserveWhiteSpace = false;
         $this->dom->formatOutput = false;
         $this->rps = $this->dom->createElement('nfse');
         if ($sign) {
             $att = $this->dom->createAttribute('id');
-            $att->value = 'nota';
+            $att->value = 'elote';
             $this->rps->appendChild($att);
         }
         if ($teste) {
@@ -242,8 +242,8 @@ class Factory
         $this->dom->addChild(
             $node,
             "ie",
-            !empty($tom->ie) ? $tom->ie : null,
-            false
+            !empty($tom->ie) ? $tom->ie : '',
+            true
         );
         $this->dom->addChild(
             $node,
@@ -278,26 +278,26 @@ class Factory
         $this->dom->addChild(
             $node,
             "complemento",
-            !empty($tom->complemento) ? $tom->complemento : null,
-            false
+            !empty($tom->complemento) ? $tom->complemento : '',
+            true
         );
         $this->dom->addChild(
             $node,
             "ponto_referencia",
-            !empty($tom->ponto_referencia) ? $tom->ponto_referencia : null,
-            false
+            !empty($tom->ponto_referencia) ? $tom->ponto_referencia : '',
+            true
         );
         $this->dom->addChild(
             $node,
             "bairro",
-            !empty($tom->bairro) ? $tom->bairro : null,
-            false
+            !empty($tom->bairro) ? $tom->bairro : '',
+            true
         );
         $this->dom->addChild(
             $node,
             "cidade",
-            !empty($tom->cidade) ? $tom->cidade : null,
-            false
+            !empty($tom->cidade) ? $tom->cidade : '',
+            true
         );
         $this->dom->addChild(
             $node,
@@ -360,6 +360,18 @@ class Factory
             );
             $this->dom->addChild(
                 $node,
+                "codigo_item_lista_servico",
+                $item->codigo_item_lista_servico,
+                true
+            );
+            $this->dom->addChild(
+                $node,
+                "descritivo",
+                $item->descritivo,
+                true
+            );
+            $this->dom->addChild(
+                $node,
                 "unidade_codigo",
                 isset($item->unidade_codigo) ? $item->unidade_codigo : null,
                 false
@@ -376,18 +388,7 @@ class Factory
                 isset($item->unidade_valor_unitario) ? number_format($item->unidade_valor_unitario, 2, ',', '') : null,
                 false
             );
-            $this->dom->addChild(
-                $node,
-                "codigo_item_lista_servico",
-                $item->codigo_item_lista_servico,
-                true
-            );
-            $this->dom->addChild(
-                $node,
-                "descritivo",
-                $item->descritivo,
-                true
-            );
+            
             $this->dom->addChild(
                 $node,
                 "aliquota_item_lista_servico",
@@ -421,6 +422,40 @@ class Factory
             $itens->appendChild($node);
         }
         $this->rps->appendChild($itens);
+        foreach ($this->std->genericos as $generico) {
+            $genericos = $this->dom->createElement('genericos');
+            $lista = $this->dom->createElement('lista');
+            $this->dom->addChild(
+                $lista,
+                "titulo",
+                isset($generico->titulo) ? $generico->titulo : '',
+                true
+            );
+            $this->dom->addChild(
+                $lista,
+                "descricao",
+                isset($generico->descricao) ? $generico->descricao : '',
+                true
+            );
+            $genericos->appendChild($lista);
+            $this->rps->appendChild($genericos);
+        }
+        foreach ($this->std->produtos as $produto) {
+            $produtos = $this->dom->createElement('produtos');
+            $this->dom->addChild(
+                $produtos,
+                "descricao",
+                isset($produto->descricao) ? $produto->descricao : '',
+                true
+            );
+            $this->dom->addChild(
+                $produtos,
+                "valor",
+                !empty($produto->valor) ? number_format($produto->valor, 2, ',', '') : '',
+                true
+            );
+            $this->rps->appendChild($produtos);
+        }
         $this->dom->appendChild($this->rps);
         return $this->dom->saveXML($this->rps);
     }

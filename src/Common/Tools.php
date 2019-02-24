@@ -19,6 +19,7 @@ use NFePHP\Common\Certificate;
 use NFePHP\Common\DOMImproved as Dom;
 use NFePHP\NFSeIPM\RpsInterface;
 use NFePHP\NFSeIPM\Common\Signer;
+use NFePHP\NFSeIPM\Common\Signer2;
 use NFePHP\NFSeIPM\Common\Soap\SoapInterface;
 use NFePHP\NFSeIPM\Common\Soap\SoapCurl;
 
@@ -36,7 +37,9 @@ class Tools
     protected $environment;
     protected $filepath;
     protected $storage;
-    
+    protected $url = 'http://sync.nfs-e.net/datacenter/include/nfw/importa_nfw/nfw_import_upload.php?eletron=1';
+
+
     /**
      * Constructor
      * @param string $config
@@ -84,6 +87,7 @@ class Tools
      */
     public function sign($content, $tagname, $mark)
     {
+        /*
         $xml = Signer::sign(
             $this->certificate,
             $content,
@@ -92,7 +96,8 @@ class Tools
             OPENSSL_ALGO_SHA1,
             [true,true,null,null],
             'nfse'
-        );
+        );*/
+        $xml = Signer2::sign($this->certificate, $content);
         $dom = new Dom('1.0', 'UTF-8');
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = false;
@@ -103,14 +108,16 @@ class Tools
     /**
      * Send message to webservice
      * @param string $message
+     * @param string $operation
      * @return string XML response from webservice
      */
-    public function send($message)
+    public function send($message, $operation)
     {
         if ($this->config->tpamb !== 3) {
             $response = $this->upload($message);
         } else {
-            $response = $this->fakeResponse();
+            return $message;
+            $response = $this->fakeResponse($message, $operation);
         }
         return $response;
     }
@@ -133,11 +140,10 @@ class Tools
                 'cidade' => $this->wsobj->tom,
                 'file' => '@'. $this->filepath
             ];
-            $url = "http://sync.nfs-e.net/datacenter/include/nfw/importa_nfw/nfw_import_upload.php?eletron=1";
             $userAgent = 'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0';
 
             $oCurl = curl_init();
-            curl_setopt($oCurl, CURLOPT_URL, $url);
+            curl_setopt($oCurl, CURLOPT_URL, $this->url);
             curl_setopt($oCurl, CURLOPT_USERAGENT, $userAgent);
             curl_setopt($oCurl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($oCurl, CURLOPT_POST, true);
@@ -176,10 +182,17 @@ class Tools
      * Response for FAKE
      * @return string
      */
-    protected function fakeResponse()
+    protected function fakeResponse($message, $operation)
     {
-        $file = realpath(__DIR__ . '/../../storage');
-        return file_get_contents($file .'/fake_response.xml');
+        //$file = realpath(__DIR__ . '/../../storage');
+        //return file_get_contents($file .'/fake_response.xml');
+        
+        $resp = [
+            'url' => $this->url,
+            'operation' => $operation,
+            'body' => $message
+        ];
+        return json_encode($resp);
     }
     
     /**

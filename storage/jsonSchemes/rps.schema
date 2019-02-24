@@ -147,7 +147,7 @@
                 "ie": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^[0-9]{4,16}$"
+                    "pattern": "^[0-9]{0,16}$"
                 },
                 "nome_razao_social": {
                     "required": false,
@@ -177,22 +177,22 @@
                 "complemento": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^.{1,50}$"
+                    "pattern": "^.{0,50}$"
                 },
                 "ponto_referencia": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^.{1,100}$"
+                    "pattern": "^.{0,100}$"
                 },
                 "bairro": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^.{1,30}$"
+                    "pattern": "^.{0,30}$"
                 },
                 "cidade": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^[0-9]{4,9}$"
+                    "pattern": "^[0-9]{0,9}$"
                 },
                 "cep": {
                     "required": false,
@@ -202,7 +202,7 @@
                 "ddd_fone_comercial": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^[0-9]{3}$"
+                    "pattern": "^[0-9]{2,3}$"
                 },
                 "fone_comercial": {
                     "required": false,
@@ -212,7 +212,7 @@
                 "ddd_fone_residencial": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^[0-9]{3}$"
+                    "pattern": "^[0-9]{2,3}$"
                 },
                 "fone_residencial": {
                     "required": false,
@@ -222,7 +222,7 @@
                 "ddd_fax": {
                     "required": false,
                     "type": ["string","null"],
-                    "pattern": "^[0-9]{3}$"
+                    "pattern": "^[0-9]{2,3}$"
                 },
                 "fone_fax": {
                     "required": false,
@@ -252,7 +252,7 @@
                     "unidade_codigo": {
                         "required": false,
                         "type": ["string","null"],
-                        "pattern": "^[0-9]{4,9}$"
+                        "pattern": "^[0-9]{1,9}$"
                     },
                     "unidade_quantidade": {
                         "required": false,

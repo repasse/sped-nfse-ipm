@@ -45,6 +45,7 @@ class Tools extends BaseTools
      */
     public function consultar($codigo = null, $numero = null, $serie = null, $cadastro = null): string
     {
+        $operation = 'consultar';
         $content = "<nfse><pesquisa>";
         if (!empty($codigo)) {
             $content .= "<codigo_autenticidade>$codigo</codigo_autenticidade>";
@@ -54,7 +55,7 @@ class Tools extends BaseTools
                . "<cadastro>$cadastro</cadastro>";
         }
         $content .= "</pesquisa><nfse>";
-        return $this->send($content);
+        return $this->send($content, $operation);
     }
     
     /**
@@ -64,7 +65,8 @@ class Tools extends BaseTools
      */
     public function enviar(RpsInterface $rps): string
     {
-        if ($this->config->tpamb > 1) {
+        $operation = 'enviar';
+        if ($this->config->tpamb > 1 && $this->config->tpamb < 3) {
             $rps->teste(true);
         }
         //assina se necessário
@@ -73,9 +75,9 @@ class Tools extends BaseTools
             $content = $rps->render();
             
             $tagname = 'nfse';
-            $mark = 'id';
+            $mark = '';
             $algorithm = OPENSSL_ALGO_SHA1;
-            $canonical = [false,true,null,null];
+            $canonical = '';//[false,false,null,null];
             $rootname = 'nfse';
             $content = Signer::sign(
                 $this->certificate,
@@ -89,6 +91,6 @@ class Tools extends BaseTools
         } else {
             $content = $rps->render();
         }
-        return $this->send($content);
+        return $this->send($content, $operation);
     }
 }

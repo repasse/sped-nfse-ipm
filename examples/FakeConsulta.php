@@ -7,6 +7,7 @@ require_once '../bootstrap.php';
 use NFePHP\Common\Certificate;
 use NFePHP\NFSeIPM\Tools;
 use NFePHP\NFSeIPM\Rps;
+use NFePHP\NFSeIPM\Common\FakePretty;
 
 try {
 
@@ -34,8 +35,10 @@ try {
     
     $response = $tools->consultar($codigo, $numero, $serie, $cadastro);
 
-    header("Content-type: text/xml");
-    echo $response;
+    echo FakePretty::prettyPrint($response, '');
+    
+    //header("Content-type: text/xml");
+    //echo $response;
     
 } catch (\Exception $e) {
     echo $e->getMessage();
