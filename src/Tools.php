@@ -73,20 +73,9 @@ class Tools extends BaseTools
         if ($this->wsobj->sign) {
             $rps->sign($this->wsobj->sign);
             $content = $rps->render();
-            
-            $tagname = 'nfse';
-            $mark = '';
-            $algorithm = OPENSSL_ALGO_SHA1;
-            $canonical = '';//[false,false,null,null];
-            $rootname = 'nfse';
             $content = Signer::sign(
                 $this->certificate,
-                $content,
-                $tagname,
-                $mark,
-                $algorithm,
-                $canonical,
-                $rootname
+                $content
             );
         } else {
             $content = $rps->render();

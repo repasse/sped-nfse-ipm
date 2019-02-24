@@ -48,7 +48,7 @@ class Factory
     {
         $this->std = $std;
         $this->dom = new Dom('1.0', 'UTF-8');
-        $this->dom->preserveWhiteSpace = false;
+        $this->dom->preserveWhiteSpace = true;
         $this->dom->formatOutput = false;
         $this->rps = $this->dom->createElement('nfse');
         if ($sign) {
@@ -410,7 +410,7 @@ class Factory
             $this->dom->addChild(
                 $node,
                 "valor_deducao",
-                isset($item->valor_deducao) ? number_format($item->valor_deducao, 2, ',', '') : null,
+                isset($item->valor_deducao) ? $item->valor_deducao : null,
                 false
             );
             $this->dom->addChild(
@@ -424,20 +424,20 @@ class Factory
         $this->rps->appendChild($itens);
         foreach ($this->std->genericos as $generico) {
             $genericos = $this->dom->createElement('genericos');
-            $lista = $this->dom->createElement('lista');
+            $linha = $this->dom->createElement('linha');
             $this->dom->addChild(
-                $lista,
+                $linha,
                 "titulo",
                 isset($generico->titulo) ? $generico->titulo : '',
                 true
             );
             $this->dom->addChild(
-                $lista,
+                $linha,
                 "descricao",
                 isset($generico->descricao) ? $generico->descricao : '',
                 true
             );
-            $genericos->appendChild($lista);
+            $genericos->appendChild($linha);
             $this->rps->appendChild($genericos);
         }
         foreach ($this->std->produtos as $produto) {

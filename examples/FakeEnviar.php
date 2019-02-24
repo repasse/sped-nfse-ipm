@@ -55,7 +55,7 @@ try {
     $std->nf->valor_rps = 34.68; //opcional
     $std->nf->valor_pis = 0.00; //opcional
     $std->nf->valor_cofins = 0.00; //opcional
-    $std->nf->observacao = 'PRESTACAO DE SERVICO\r\nTrib Aprox R$ 4,68 Federal e 1,36 Municipal Fonte: IBPT/FECOMERCIO RS-Valor Liquido da Nota Fiscal - R$ 34,68\r\nCondicoes de Pagamento: GARANTIA\r\n\r\n\r\nContato: 733518 - Depto: 04 - Vendedor: 0538-JONATHAN NAZARIO DE OLIVEIRA\r\nO.S.: 161463 - Placa: MKU8017 - Chassi: 9BWAG4123FT522156 - Modelo: VW/UP TAKE MA - KM: 21054 - \r\nDN : 1220 - Despesas de Garantia do Fabricante'; //descreve também  o motivo de cancelamento  //opcional
+    $std->nf->observacao = 'PRESTACAO DE SERVICO\r\nTrib Aprox R$ 4,68 Federal e 1,36 Municipal Fonte: IBPT/FECOMERCIO RS-Valor Liquido da Nota Fiscal - R$ 34,68\r\nCondicoes de Pagamento: GARANTIA\r\n\r\n\r\nContato: 733518 - Depto: 04 - Vendedor: 0538-JONATHAN NAZARIO DE OLIVEIRA\r\nO.S.: 161463 - Placa: MKU8017  - Chassi: 9BWAG4123FT522156 - Modelo: VW/UP TAKE MA - KM: 21054 - \r\nDN : 1220 - Despesas de Garantia do Fabricante'; //descreve também  o motivo de cancelamento  //opcional
 
     $std->prestador = new \stdClass(); //obrigatorio
     $std->prestador->cpfcnpj = '83270397000592'; //obrigatorio
@@ -120,7 +120,7 @@ try {
     $std->itens[1]->descritivo = 'BATERIA CARREGADO/A/OS/AS'; //obrigatorio
     $std->itens[1]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
     $std->itens[1]->unidade_quantidade = 0.03; //opcional 
-    $std->itens[1]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[1]->unidade_valor_unitario = 108.33; //opcional 
     $std->itens[1]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[1]->situacao_tributaria = '0'; //
     $std->itens[1]->valor_tributavel = 3.25; //obrigatorio
@@ -148,7 +148,7 @@ try {
     $std->itens[2]->descritivo = 'TAMPA DESM.+MONT.'; //obrigatorio
     $std->itens[2]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
     $std->itens[2]->unidade_quantidade = 0.03; //opcional 
-    $std->itens[2]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[2]->unidade_valor_unitario = 108.33; //opcional 
     $std->itens[2]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[2]->situacao_tributaria = '0'; //
     $std->itens[2]->valor_tributavel = 3.25; //obrigatorio
