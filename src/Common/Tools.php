@@ -79,33 +79,6 @@ class Tools
     }
     
     /**
-     * Sign XML passing in content
-     * @param string $content
-     * @param string $tagname
-     * @param string $mark
-     * @return string XML signed
-     */
-    public function sign($content, $tagname, $mark)
-    {
-        /*
-        $xml = Signer::sign(
-            $this->certificate,
-            $content,
-            $tagname,
-            $mark,
-            OPENSSL_ALGO_SHA1,
-            [true,true,null,null],
-            'nfse'
-        );*/
-        $xml = Signer2::sign($this->certificate, $content);
-        $dom = new Dom('1.0', 'UTF-8');
-        $dom->preserveWhiteSpace = false;
-        $dom->formatOutput = false;
-        $dom->loadXML($xml);
-        return $dom->saveXML($dom->documentElement);
-    }
-    
-    /**
      * Send message to webservice
      * @param string $message
      * @param string $operation
@@ -117,7 +90,7 @@ class Tools
             $response = $this->upload($message);
         } else {
             return $message;
-            $response = $this->fakeResponse($message, $operation);
+            //$response = $this->fakeResponse($message, $operation);
         }
         return $response;
     }
@@ -184,9 +157,6 @@ class Tools
      */
     protected function fakeResponse($message, $operation)
     {
-        //$file = realpath(__DIR__ . '/../../storage');
-        //return file_get_contents($file .'/fake_response.xml');
-        
         $resp = [
             'url' => $this->url,
             'operation' => $operation,
