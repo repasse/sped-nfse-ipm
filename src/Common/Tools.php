@@ -106,12 +106,16 @@ class Tools
         try {
             $response = '';
             $this->filepath = $this->saveMessage($message);
-        
+            if (function_exists('curl_file_create')) {
+                $cFile = curl_file_create($this->filepath);
+            } else {
+                $cFile = '@' . realpath($this->filepath);
+            }
             $fields = [
                 'login' => $this->config->cnpj,
                 'senha' => $this->config->senha,
                 'cidade' => $this->wsobj->tom,
-                'file' => '@'. $this->filepath
+                'f1' => $cFile //Alterado
             ];
             $userAgent = 'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0';
 
