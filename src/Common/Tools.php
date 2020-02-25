@@ -131,7 +131,6 @@ class Tools
             $httpcode = curl_getinfo($oCurl, CURLINFO_HTTP_CODE);
             $responseHead = trim(substr($response, 0, $headsize));
             curl_close($oCurl);
-
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
