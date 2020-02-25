@@ -19,11 +19,11 @@ try {
         'razao' => 'Empresa Test Ltda',
         'tpamb' => 3 //1-producao, 2-homologacao, 3-Fake
     ];
-    
+
     //NOTA: se 1-produção a NFSe será enviada
     //      se 2-homologação a NFSe será enviada, mas marcada como teste
     //      se 3-Fake NFSe NÃO SERÁ enviada e o XML da solicitação será retornado
-    
+
     //Consulte a prefeitura para saber se a assinatura é obrigatoria
     //se não for abra um ISSUE no repositório
 
@@ -36,7 +36,7 @@ try {
     $tools = new Tools($configJson, $cert);
 
     $std = new \stdClass();
-    
+
     //$std->identificador = '1234'; //opcional
 
 //consulte a Prefeitura para determinar se o RPS é necessário
@@ -96,15 +96,15 @@ try {
     $std->itens[0]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
     $std->itens[0]->descritivo = 'AP.COMANDO REDE EL.BORDO PROGR'; //obrigatorio
     $std->itens[0]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
-    $std->itens[0]->unidade_quantidade = 0.13; //opcional 
-    $std->itens[0]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[0]->unidade_quantidade = 0.13; //opcional
+    $std->itens[0]->unidade_valor_unitario = 108.38; //opcional
     $std->itens[0]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[0]->situacao_tributaria = '0'; //
     //0 - Tributada Integralmente: o valor do imposto será lançado para o emissor da nota.
     //1 - Tributada Integralmente com ISSRF: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso seja órgão público municipal.
     //2 - Tributada Integralmente e sujeita à Substituição Tributária: o valor do imposto não será lançado, pois será recolhido pelo tomador (substituto tributário), caso não seja um órgão público municipal.
     //3 - Tributada com redução da base de cálculo: o valor do imposto será lançado para o emissor da nota, porém, na apuração da base de cálculo, será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica, caso o serviço consignado seja o de código 1705).
-    //4 - Tributada com redução da base de cálculo com ISSRF: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso seja órgão público municipal, porém na apuração da base de cálculo será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica, caso o serviço consignado seja o de código 1705). 
+    //4 - Tributada com redução da base de cálculo com ISSRF: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso seja órgão público municipal, porém na apuração da base de cálculo será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica, caso o serviço consignado seja o de código 1705).
     //5 - Tributada com redução da base de cálculo e sujeita à Substituição Tributária: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso não seja um órgão público municipal, porém na apuração da base de cálculo será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica,caso o serviço consignado seja o de código 1705).
     //6 - Isenta: não irá gerar valor de imposto, pois o prestador é isento.
     //7 - Imune: não irá gerar valor do imposto, pois o prestador é imune.
@@ -116,29 +116,29 @@ try {
     $std->itens[0]->valor_tributavel = 14.09; //obrigatorio
     $std->itens[0]->valor_deducao = 0; //opcional
     $std->itens[0]->valor_issrf = 0.00; //opcional
-    
+
     $std->itens[1] = new \stdClass(); //obrigatorio
     $std->itens[1]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
     $std->itens[1]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
     $std->itens[1]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
     $std->itens[1]->descritivo = 'BATERIA CARREGADO/A/OS/AS'; //obrigatorio
     $std->itens[1]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
-    $std->itens[1]->unidade_quantidade = 0.03; //opcional 
-    $std->itens[1]->unidade_valor_unitario = 108.33; //opcional 
+    $std->itens[1]->unidade_quantidade = 0.03; //opcional
+    $std->itens[1]->unidade_valor_unitario = 108.33; //opcional
     $std->itens[1]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[1]->situacao_tributaria = '0'; //
     $std->itens[1]->valor_tributavel = 3.25; //obrigatorio
     $std->itens[1]->valor_deducao = 0; //opcional
     $std->itens[1]->valor_issrf = 0.00; //opcional
-    
+
     $std->itens[2] = new \stdClass(); //obrigatorio
     $std->itens[2]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
     $std->itens[2]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
     $std->itens[2]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
     $std->itens[2]->descritivo = 'TAMPA DESM.+MONT.'; //obrigatorio
     $std->itens[2]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
-    $std->itens[2]->unidade_quantidade = 0.03; //opcional 
-    $std->itens[2]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[2]->unidade_quantidade = 0.03; //opcional
+    $std->itens[2]->unidade_valor_unitario = 108.38; //opcional
     $std->itens[2]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[2]->situacao_tributaria = '0'; //
     $std->itens[2]->valor_tributavel = 3.25; //obrigatorio
@@ -151,44 +151,44 @@ try {
     $std->itens[2]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
     $std->itens[2]->descritivo = 'TAMPA DESM.+MONT.'; //obrigatorio
     $std->itens[2]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
-    $std->itens[2]->unidade_quantidade = 0.03; //opcional 
-    $std->itens[2]->unidade_valor_unitario = 108.33; //opcional 
+    $std->itens[2]->unidade_quantidade = 0.03; //opcional
+    $std->itens[2]->unidade_valor_unitario = 108.33; //opcional
     $std->itens[2]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[2]->situacao_tributaria = '0'; //
     $std->itens[2]->valor_tributavel = 3.25; //obrigatorio
     $std->itens[2]->valor_deducao = 0; //opcional
     $std->itens[2]->valor_issrf = 0.00; //opcional
-    
+
     $std->itens[3] = new \stdClass(); //obrigatorio
     $std->itens[3]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
     $std->itens[3]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
     $std->itens[3]->codigo_item_lista_servico = '1401'; //obrigatorio Lei Complementar 116/2003
     $std->itens[3]->descritivo = 'TAMPA REMOV.+INST.'; //obrigatorio
     $std->itens[3]->unidade_codigo = '1'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
-    $std->itens[3]->unidade_quantidade = 0.13; //opcional 
-    $std->itens[3]->unidade_valor_unitario = 108.38; //opcional 
+    $std->itens[3]->unidade_quantidade = 0.13; //opcional
+    $std->itens[3]->unidade_valor_unitario = 108.38; //opcional
     $std->itens[3]->aliquota_item_lista_servico = 4.00; //obrigatorio
     $std->itens[3]->situacao_tributaria = '0'; //
     $std->itens[3]->valor_tributavel = 14.09; //obrigatorio
     $std->itens[3]->valor_deducao = 0; //opcional
     $std->itens[3]->valor_issrf = 0.00; //opcional
-    
+
     $std->genericos[0] = new \stdClass();
     $std->genericos[0]->titulo = '';
     $std->genericos[0]->descricao = '';
-    
+
     $std->produtos[0] = new \stdClass();
     $std->produtos[0]->descricao = '';
     $std->produtos[0]->valor = '';
-    
+
     $rps = new Rps($std);
-    
+
     $response = $tools->enviar($rps);
-    
-    header('Content-Type: application/xml; charset=iso-8859-1');
-    echo $response;
-    //echo FakePretty::prettyPrint($response, '');
-    
+
+    //header('Content-Type: application/xml; charset=iso-8859-1');
+    //echo $response;
+    echo FakePretty::prettyPrint($response, '');
+
 } catch (\Exception $e) {
     echo $e->getMessage();
 }

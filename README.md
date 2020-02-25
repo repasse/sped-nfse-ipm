@@ -2,7 +2,7 @@
 
 Api para comunicação com webservices do Modelo IPM
 
-## ALPHA TESTES (não foram feitos testes reais até o momento)
+## BETHA TESTES (necessito ajuda para realização de testes)
 
 [![Latest Stable Version][ico-stable]][link-packagist]
 [![Build Status][ico-travis]][link-travis]
@@ -45,78 +45,79 @@ Não deixe de se cadastrar no [grupo de discussão do NFePHP](http://groups.goog
 
 Os dados cadastrais dos municipios estão em [storage/municipios_ipm.json](storage/municipios_ipm.json)
 
-- Arapongas - PR
-- Campo Largo - PR
-- Castro - PR 
-- Campo Mourão - PR
-- Colombo - PR
-- Enéas Marques - PR
-- Guaíra - PR
-- Janiópolis - PR
-- Mamborê - PR
-- Marechal Candido Rondon - PR
-- Maripa - PR
-- Mercedes - PR
-- Nova Cantu - PR
-- Paranaguá - PR
-- Pinhais - PR
-- Santa Helena - PR
-- Telêmaco Borba - PR
-- Terra Boa - PR
-- Terra Roxa - PR
-- Tibagi - PR
-- Agrolândia - SC
-- Apiúna - SC
-- Araquari - SC
-- Ascurra - SC
-- Aurora  - SC
-- Balneário Barra do Sul - SC
-- Balneário Piçarras - SC
-- Barra Velha - SC
-- Benedito Novo - SC
-- Biguaçu - SC
-- Brusque - SC
-- Concórdia - SC
-- Doutor Pedrinho - SC
-- Garuva - SC
-- Guabiruba - SC
-- Guaramirim - SC
-- Ibirama - SC
-- Indaial - SC
-- Iporã do Oeste - SC
-- Itapoá - SC
-- Ituporanga - SC
-- José Boiteux - SC
-- Laurentino - SC
-- Lontras - SC
-- Massaranduba - SC
-- Ouro - SC
-- Palhoça - SC
-- Pomerode - SC
-- Presidente Getúlio - SC
-- Rio das Antas - SC
-- Rio do Oeste - SC
-- Rio dos Cedros - SC
-- Rio do Sul - SC
-- Roderio - SC
-- Salete - SC
-- São Francisco do Sul - SC
-- Taió - SC
-- Timbó - SC
-- Três Barras - SC
-- Videira - SC
-- Vitor Meireles - SC
-- Witmarsum - SC
-- Candelária - RS
-- Estrela - RS
-- Estrela Velha - RS
-- Gravataí - RS
-- Igrejinha - RS
-- Panambi - RS
-- Parobé - RS
-- Santa Rosa - RS 
-- Sobradinho - RS
-
+|n|Município|UF|Ibge|Cidade TOM|
+|:---:|:---|:---:|:---:|:---:|
+|1|AGROLANDIA|SC|4200200|8003|
+|2|APIUNA|SC|4201257|9941|
+|3|ARAPONGAS|PR|4101507|7427|
+|4|ARAQUARI|SC|4201307|8025|
+|5|ASCURRA|SC|4201703|8033|
+|6|AURORA|SC|4201901|8037|
+|7|BARRA DO SUL (BALNEARIO)|SC|4202057|5549|
+|8|BARRA VELHA|SC|4202107|8041|
+|9|BENEDITO NOVO|SC|4202206|8043|
+|10|BIGUACU|SC|4202305|8045|
+|11|BRUSQUE|SC|4202909|8055|
+|12|CAMPO LARGO|PR|4104204|7481|
+|13|CAMPO MOURAO|PR|4104303|7483|
+|14|CANDELARIA|RS|4304200|8581|
+|15|CASTRO|PR|4104907|7495|
+|16|COLOMBO|PR|4105805|7513|
+|17|CONCORDIA|SC|4204301|8083|
+|18|DOUTOR PEDRINHO|SC|4205159|9945|
+|19|ENEAS MARQUES|PR|4107405|7545|
+|20|ESTRELA|RS|4307807|8653|
+|21|ESTRELA VELHA|RS|4307815|0982|
+|22|GARUVA|SC|4205803|8115|
+|23|GRAVATAI|RS|4309209|8683|
+|24|GUABIRUBA|SC|4206306|8123|
+|25|GUAIRA|PR|4108809|7571|
+|26|GUARAMIRIM|SC|4206504|8127|
+|27|IBIRAMA|SC|4206900|8135|
+|28|IGREJINHA|RS|4310108|8703|
+|29|INDAIAL|SC|4207502|8147|
+|30|IPORA DO OESTE|SC|4207650|9951|
+|31|ITAPOA|SC|4208450|9985|
+|32|ITUPORANGA|SC|4208500|8167|
+|33|JANIOPOLIS|PR|4112207|7637|
+|34|JOSE BOITEUX|SC|4209151|9957|
+|35|LAURENTINO|SC|4209508|8187|
+|36|LONTRAS|SC|4209904|8195|
+|37|MAMBORE|PR|4114005|7673|
+|38|MARECHAL CANDIDO RONDON|PR|4114609|7683|
+|39|MARIPA|PR|4115358|5487|
+|40|MASSARANDUBA|SC|4210605|8207|
+|41|MERCEDES|PR|4115853|5531|
+|42|NOVA CANTU|PR|4116802|7719|
+|43|OURO|SC|4211801|8231|
+|44|PALHOCA|SC|4211900|8233|
+|45|PANAMBI|RS|4313904|8781|
+|46|PARANAGUA|PR|4118204|7745|
+|47|PAROBE|RS|4314050|9825|
+|48|PICARRAS (BALNEARIO)|SC|4212809|8251|
+|49|PINHAIS|PR|4119152|5453|
+|50|POMERODE|SC|4213203|8259|
+|51|PRESIDENTE GETULIO|SC|4214003|8275|
+|52|RIO DAS ANTAS|SC|4214409|8283|
+|53|RIO DO OESTE|SC|4214607|8287|
+|54|RIO DO SUL|SC|4214805|8291|
+|55|RIO DOS CEDROS|SC|4214706|8289|
+|56|RIO NEGRINHO|SC|4215000|8295|
+|57|SALETE|SC|4215307|8301|
+|58|SANTA HELENA|PR|4123501|7971|
+|59|SANTA ROSA|RS|4317202|8847|
+|60|SAO FRANCISCO DO SUL|SC|4216206|8319|
+|61|SOBRADINHO|RS|4320701|8917|
+|62|TAIO|SC|4217808|8351|
+|63|TELEMACO BORBA|PR|4127106|7915|
+|64|TERRA BOA|PR|4127205|7917|
+|65|TERRA ROXA|PR|4127403|7921|
+|66|TIBAGI|PR|4127502|7923|
+|67|TIMBO|SC|4218202|8357|
+|68|TRES BARRAS|SC|4218301|8359|
+|69|VIDEIRA|SC|4219309|8379|
+|70|VITOR MEIRELES|SC|4219358|9977|
+|71|WITMARSUM|SC|4219408|8381|
 
 ## Contribuindo
 Este é um projeto totalmente *OpenSource*, para usa-lo e modifica-lo você não paga absolutamente nada. Porém para continuarmos a mante-lo é necessário qua alguma contribuição seja feita, seja auxiliando na codificação, na documentação ou na realização de testes e identificação de falhas e BUGs.

@@ -31,10 +31,10 @@ class FakePretty
                 $std->body
             );
         }
-        $doc = new \DOMDocument('1.0', 'UTF-8');
+        $doc = new \DOMDocument('1.0', 'ISO-8859-1');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
-        $doc->loadXML($std->body);
+        $doc->loadXML(html_entity_decode($std->body));
 
         $html = "<pre>";
         $html .= '<h2>url</h2>';
@@ -50,7 +50,7 @@ class FakePretty
             ['&lt;','&gt;'],
             str_replace(
                 '<?xml version="1.0"?>',
-                '<?xml version="1.0" encoding="UTF-8"?>',
+                '<?xml version="1.0" encoding="ISO-8859-1"?>',
                 $doc->saveXML()
             )
         );

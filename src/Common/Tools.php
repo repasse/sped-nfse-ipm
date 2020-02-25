@@ -16,19 +16,13 @@ namespace NFePHP\NFSeIPM\Common;
  */
 
 use NFePHP\Common\Certificate;
-use NFePHP\Common\DOMImproved as Dom;
-use NFePHP\NFSeIPM\RpsInterface;
-use NFePHP\NFSeIPM\Common\Signer;
-use NFePHP\NFSeIPM\Common\Signer2;
-use NFePHP\NFSeIPM\Common\Soap\SoapInterface;
-use NFePHP\NFSeIPM\Common\Soap\SoapCurl;
 
 class Tools
 {
     public $lastRequest;
     public $curlerror;
     public $curlinfo;
-    
+
     protected $config;
     protected $prestador;
     protected $certificate;
@@ -49,7 +43,7 @@ class Tools
     {
         $this->config = json_decode($config);
         $this->certificate = $cert;
-        
+
         $this->storage = realpath(__DIR__ . '/../../storage');
         $urls = json_decode(
             file_get_contents($this->storage . '/municipios_ipm.json'),
@@ -67,7 +61,7 @@ class Tools
             $this->environment = 'producao';
         }
     }
-    
+
     /**
      * Remove temporary message file
      */
@@ -77,7 +71,7 @@ class Tools
             unlink($this->filepath);
         }
     }
-    
+
     /**
      * Send message to webservice
      * @param string $message
@@ -89,12 +83,12 @@ class Tools
         if ($this->config->tpamb !== 3) {
             $response = $this->upload($message);
         } else {
-            return $message;
-            //$response = $this->fakeResponse($message, $operation);
+            //return $message;
+            $response = $this->fakeResponse($message, $operation);
         }
         return $response;
     }
-    
+
     /**
      * Upload message to URL
      * @param string $message
@@ -126,9 +120,6 @@ class Tools
             curl_setopt($oCurl, CURLOPT_POST, true);
             curl_setopt($oCurl, CURLOPT_POSTFIELDS, $fields);
             curl_setopt($oCurl, CURLOPT_TIMEOUT, 20);
-            //curl_setopt($oCurl, CURLOPT_HEADER, false);
-            //curl_setopt($oCurl, CURLOPT_SSL_VERIFYHOST, 0);
-            //curl_setopt($oCurl, CURLOPT_SSL_VERIFYPEER, 0);
 
             $response = curl_exec($oCurl);
             $curlerror = curl_error($oCurl);
@@ -140,35 +131,37 @@ class Tools
             $httpcode = curl_getinfo($oCurl, CURLINFO_HTTP_CODE);
             $responseHead = trim(substr($response, 0, $headsize));
             curl_close($oCurl);
+
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
         if ($curlerror != '') {
-            throw new \Exception($curlerror . " [$url]");
+            throw new \Exception($curlerror . " [{$this->url}]");
         }
         if ($httpcode != 200) {
             throw new \Exception(
-                " [$url] HTTP Error code: $httpcode - "
+                " [{$this->url}] HTTP Error code: $httpcode - "
                 . $responseHead
             );
         }
         return $response;
     }
-    
+
     /**
      * Response for FAKE
      * @return string
      */
     protected function fakeResponse($message, $operation)
     {
+        $message = htmlentities($message);
         $resp = [
             'url' => $this->url,
             'operation' => $operation,
-            'body' => $message
+            'body' => "{$message}"
         ];
         return json_encode($resp);
     }
-    
+
     /**
      * Creates a temporary file for upload
      * @param string $message

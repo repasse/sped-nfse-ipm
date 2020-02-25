@@ -6,7 +6,6 @@ require_once '../bootstrap.php';
 
 use NFePHP\Common\Certificate;
 use NFePHP\NFSeIPM\Tools;
-use NFePHP\NFSeIPM\Rps;
 use NFePHP\NFSeIPM\Common\FakePretty;
 
 try {
@@ -27,19 +26,19 @@ try {
     $cert = Certificate::readPfx($content, $password);
 
     $tools = new Tools($configJson, $cert);
- 
+
     $codigo = '01234567890123'; //codigo de autenticidade
     $numero = null; //'123'; //numero da NFSe
     $serie = null; //'1'; //serie da NFSe
     $cadastro = null; //'1733160024'; //numero do cadastro do contribuinte
-    
+
     $response = $tools->consultar($codigo, $numero, $serie, $cadastro);
 
     echo FakePretty::prettyPrint($response, '');
-    
+
     //header("Content-type: text/xml");
     //echo $response;
-    
+
 } catch (\Exception $e) {
     echo $e->getMessage();
 }

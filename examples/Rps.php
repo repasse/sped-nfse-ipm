@@ -3,6 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
 
+use NFePHP\Common\Certificate;
+use NFePHP\NFSeIPM\Common\Signer;
 use NFePHP\NFSeIPM\Rps;
 
 $std = new \stdClass();
@@ -63,8 +65,8 @@ $std->itens[0] = new \stdClass(); //obrigatorio
 $std->itens[0]->tributa_municipio_prestador = 'S'; //obrigatorio S ou N
 $std->itens[0]->codigo_local_prestacao_servico = '8291'; //obrigatorio codigo TOM do municipio vide WEBTOM
 $std->itens[0]->unidade_codigo = '01212'; //opcional Código sobre variações de Prefeitura para Prefeitura. O campo torna-se obrigatório a partir do momento em que o Município utiliza esta configuração.
-$std->itens[0]->unidade_quantidade = 1.00; //opcional 
-$std->itens[0]->unidade_valor_unitario = 100.00; //opcional 
+$std->itens[0]->unidade_quantidade = 1.00; //opcional
+$std->itens[0]->unidade_valor_unitario = 100.00; //opcional
 $std->itens[0]->codigo_item_lista_servico = '702'; //obrigatorio Lei Complementar 116/2003
 $std->itens[0]->descritivo = 'descritivo do serviço realizado';//obrigatorio
 $std->itens[0]->aliquota_item_lista_servico = 2.00;//obrigatorio
@@ -73,7 +75,7 @@ $std->itens[0]->situacao_tributaria = '0'; //
     //1 - Tributada Integralmente com ISSRF: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso seja órgão público municipal.
     //2 - Tributada Integralmente e sujeita à Substituição Tributária: o valor do imposto não será lançado, pois será recolhido pelo tomador (substituto tributário), caso não seja um órgão público municipal.
     //3 - Tributada com redução da base de cálculo: o valor do imposto será lançado para o emissor da nota, porém, na apuração da base de cálculo, será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica, caso o serviço consignado seja o de código 1705).
-    //4 - Tributada com redução da base de cálculo com ISSRF: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso seja órgão público municipal, porém na apuração da base de cálculo será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica, caso o serviço consignado seja o de código 1705). 
+    //4 - Tributada com redução da base de cálculo com ISSRF: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso seja órgão público municipal, porém na apuração da base de cálculo será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica, caso o serviço consignado seja o de código 1705).
     //5 - Tributada com redução da base de cálculo e sujeita à Substituição Tributária: o valor do imposto não será lançado, pois será recolhido pelo tomador, caso não seja um órgão público municipal, porém na apuração da base de cálculo será descontado o valor da tag <valor_deducao> (esta situação tributária somente se aplica,caso o serviço consignado seja o de código 1705).
     //6 - Isenta: não irá gerar valor de imposto, pois o prestador é isento.
     //7 - Imune: não irá gerar valor do imposto, pois o prestador é imune.
@@ -89,8 +91,12 @@ $std->itens[0]->valor_issrf = 0.00;//opcional
 
 $rps = new Rps($std);
 
+$cert = Certificate::readPfx(file_get_contents('expired_certificate.pfx'), 'associacao');
+$signed = Signer::sign($cert, $rps->render());
+
 header("Content-type: text/xml");
-echo $rps->render();
+//echo $rps->render();
+echo $signed;
 
 
 

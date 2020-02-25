@@ -1,0 +1,711 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+  <retorno>
+    <mensagem>
+      <codigo>00001 - Sucesso</codigo>
+    </mensagem>
+    <numero_nfse>2994</numero_nfse>
+    <serie_nfse>1</serie_nfse>
+    <data_nfse>01/08/2019</data_nfse>
+    <hora_nfse>14:28:29</hora_nfse>
+    <situacao_codigo_nfse>1</situacao_codigo_nfse>
+    <arquivo_gerador_nfse>2994_0182910023252403.xml</arquivo_gerador_nfse>
+    <nome_arquivo_gerado_eletron>2994_0182910023252403.xml</nome_arquivo_gerado_eletron>
+    <link_nfse>http://demonstracao.nfs-e.net/datacenter/include/nfw/nfw_imp_notas.php?codauten=0182910023252403</link_nfse>
+    <cod_verificador_autenticidade>0182910023252403</cod_verificador_autenticidade>
+     
+    <!-- CODIGO HTML DA NFS-E -->
+    <codigo_html>&lt;!DOCTYPE html&gt;
+     &lt;html&gt;
+         &lt;head&gt;
+             &lt;title&gt;Nota Fiscal de Serviço Eletrônica - Série TESTE - DEMONSTRACAO Nº 2994&lt;/title&gt;
+             &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+             &lt;style&gt;
+                 #nota {
+                     width: 730px;
+                      /**BACKGROUND_IMAGE_BODY*/
+                 }            
+                 .label {
+                     height: 15px;
+                     font-size: 10px;
+                 }
+                 .barra_empresa_teste_limite {
+                     background-color: transparent;
+                     min-width: 701px;
+                     max-height:800px;
+                     min-height:100%;
+                     overflow: hidden;
+                     text-align: center;
+                     top:50px;
+                     position: absolute;
+                     overflow: hidden;
+                 }
+                 .barra_limite_marca_dagua {
+                     /**BACKGROUND_IMAGE_NOTA_SUBSTITUIDA**/
+                 }
+                 .marca_dagua_ciente {
+                     /**BACKGROUND_IMAGE_CIENTE**/
+                 }
+                 .barra_empresa_teste {
+                     -moz-transform:rotate(-35deg);
+                     -webkit-transform:rotate(-35deg);
+                     -o-transform:rotate(-35deg);
+                     position: absolute;
+                     max-height:800px;
+                     left:-250px;
+                     top:300px;
+                     min-width: 1200px;
+                     width:100%;
+                     height: 30px;
+                     text-align: center;
+                     font-size: 14px;
+                     background-color: red;
+                     color: white;
+                     font-weight: bold;
+                     padding-top: 10px;
+                 }
+                 
+                 #tableGenericos table {
+                     max-width: 680px;
+                     overflow: hidden;
+                 }
+             &lt;/style&gt;
+         &lt;/head&gt;
+         &lt;body style=&quot;font-family:Calibri,Tahoma, Arial, Helvetica, sans-serif;&quot;&gt;        
+             &lt;center&gt;
+                 &lt;div id=&quot;nota&quot;&gt;
+                     &lt;div id=&quot;corpo&quot; style=&quot;float:left; width:700px;&quot;&gt;
+                          
+                             &lt;div class=&quot;barra_empresa_teste_limite&quot; id=&quot;barra_empresa_teste_limite&quot; name=&quot;barra_empresa_teste_limite&quot;&gt;
+                                 &lt;div class=&quot;barra_empresa_teste&quot;&gt;
+                                     &lt;div style=&quot;height:20px;&quot;&gt;
+                                         &lt;img style=&quot;width:20px;&quot; src='http://demonstracao.nfs-e.net/datacenter/imagem/icone/alerta.png'&gt;
+                                         &lt;span valign=&quot;center&quot; style=&quot;padding-bottom: 3px;font-family: Calibri, Tahoma, Arial, Helvetica, sans-serif;font-size:13px;font-weight: bold;&quot;&gt;&amp;nbsp;NOTA FISCAL DE SERVIÇO ELETRÔNICA EMITIDA EM AMBIENTE DE DEMONSTRAÇÃO, SOMENTE PARA FINS DE TESTES.&amp;nbsp;&lt;/span&gt;
+                                    &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                                             &lt;div class=&quot;barra_limite_marca_dagua&quot;&gt;&lt;/div&gt;
+                         &lt;div class=&quot;marca_dagua_ciente&quot; &gt;&lt;/div&gt;
+                                             
+                         &lt;!-- Cabeçalho --&gt;
+                         &lt;div style=&quot; width:700px;height: 148px;border: 1px solid #000;float:left; &quot;&gt;
+                             &lt;div style=&quot;width:700px;min-height:148px;&quot;&gt;
+                                 &lt;!-- Esquerda do cabeçalho --&gt;
+                                 &lt;div style=&quot;float: left; width: 497px; height: 148px; &quot;&gt;
+                                     &lt;!-- Dados da Empresa --&gt;
+                                     &lt;div style=&quot;float: left;height: 148px;&quot;&gt;
+                                         &lt;!-- Logo da Empresa --&gt;
+                                         &lt;div align='center' style=&quot;text-align: center;float: left;width: 99px; height: 148px;&quot;&gt;
+                                             &lt;table style='height:148px' cellpadding='0' cellspacing='0' width='99px' border=&quot;0&quot;&gt;
+                                                 &lt;tr&gt;
+                                                     &lt;td style='height:120px;text-align:center'&gt;&lt;div style='padding-top:2px;padding-left:2px; padding-right:5px;background-color:white'&gt;&lt;img src='http://demonstracao.nfs-e.net/datacenter/include/nfw/nfw_resize_img.php?img=logo_empresa_11252365444435.jpg&amp;w=72&amp;h=98' border='0'&gt;&lt;/div&gt;&lt;/td&gt;
+                                                 &lt;/tr&gt;
+                                             &lt;/table&gt;                                        
+                                         &lt;/div&gt;
+                                         &lt;!-- Informações da Empresa --&gt;
+                                         &lt;div style=&quot;float: left;width: 395px;height: 148px;text-align: left;font-size: 13px;&quot;&gt;
+                                             &lt;!-- Nome da Empresa --&gt;
+                                             &lt;div style=&quot;padding-top: 6px;display:inline-table;&quot;&gt;
+                                                 &lt;div style=''&gt;&lt;b&gt; EMPRESA TESTE&lt;/b&gt;&lt;/div&gt;&lt;div style=''&gt; EMPRESA TESTE SINCRONIZAÇÃO DATACENTER&lt;/div&gt;                                        &lt;/div&gt;
+                                             &lt;!-- Endereço da Empresa --&gt;
+                                             &lt;div style=&quot;width: 394px;float: left;&quot;&gt;                                            
+                                                 &lt;div style=&quot;width: 300px;float: left; &quot;&gt;
+                                                     &lt;div  style=&quot;height: 15px;font-size: 11px;text-align: left;&quot;&gt;
+                                                         &lt;b&gt;CNPJ: &lt;/b&gt; 11.252.365/4444-35                                                &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;width: 394px;float: left;&quot;&gt;
+                                                     &lt;div style=&quot;height: 15px;font-size: 11px;text-align: left;display:inline-table;&quot;&gt;
+                                                         RUA XV DE NOVEMBRO, 222&amp;nbsp;&amp;nbsp;&amp;nbsp;                                                &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;width: 394px;float: left;&quot;&gt;
+                                                     &lt;div  style=&quot;height: 15px;font-size: 11px;text-align: left;&quot;&gt;
+                                                        &lt;span class='cabecalho_span'&gt;CEP&lt;/span&gt;: 89160-033 - &lt;span class=&quot;cabecalho_span&quot;&gt;Bairro&lt;/span&gt;: CENTRO&amp;nbsp;&amp;nbsp;&amp;nbsp;                                                &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;width: 394px;float: left;&quot;&gt;
+                                                     &lt;div  style=&quot;height: 15px;font-size: 11px;text-align: left;&quot;&gt;
+                                                         Município: RIO DO SUL - SC                                                &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                                                                                 &lt;div style=&quot;width: 394px;float: left;&quot;&gt;
+                                                         &lt;div  style=&quot;height: 15px;font-size: 11px;text-align: left;&quot;&gt;
+                                                             Telefone: (47) 35311500&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;                                                    &lt;/div&gt;
+                                                     &lt;/div&gt;
+                                                                                             
+                                                                                             &lt;div style=&quot;width: 394px;float: left;&quot;&gt;
+                                                     &lt;div  style=&quot;height: 15px;font-size: 11px;text-align: left;&quot;&gt;
+                                                         Email: cristian.dutra@ipm.com.br                                                &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                                                                             &lt;div style=&quot;width:195px;float: left;&quot;&gt;
+                                                     &lt;div  style=&quot;height: 15px;font-size: 11px;text-align: left;&quot;&gt;
+                                                         &lt;b&gt;Insc. Municipal:&lt;/b&gt; 167158                                                &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                                                                                 &lt;div style=&quot;width: 195px;float: left;&quot;&gt;
+                                                         &lt;div  style=&quot;height: 15px;font-size: 11px;text-align: left;&quot;&gt;
+                                                             &lt;b&gt;Insc. Estadual:&lt;/b&gt; 123456789                                           
+                                                         &lt;/div&gt;
+                                                     &lt;/div&gt;
+                                                                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                                 &lt;!-- Direita do cabeçalho --&gt;
+                                 &lt;div style=&quot;float: left;width: 195px;height: 148px;border-left: 1px solid #000;&quot;&gt;
+                                     &lt;div style=&quot;width: 101px;height: 148px;float:left;border-right:1px solid #000;&quot;  &gt;
+                                         &lt;div style=&quot;width: 101px;height: 74px;border-bottom:1px solid #000; &quot;&gt;
+                                             &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; height=&quot;95%&quot; width=&quot;95%&quot;  border=&quot;0&quot;&gt;
+                                                 &lt;tr&gt;
+                                                     &lt;td align=&quot;center&quot; style=&quot;height:74px;&quot;&gt;
+                                                         &lt;div style=&quot;text-align:center;vertical-align: central;width:100px;height:33px;top:22px;&quot;&gt;
+                                                             &lt;div align=&quot;center&quot; style=&quot;min-height: 15px;font-size: 10px;text-align: center;&quot;&gt;
+                                                                 Número da NFS-e
+                                                             &lt;/div&gt;
+                                                             &lt;div align=&quot;center&quot; style=&quot;height: auto;text-align: center;font-weight: bold;font-size: 12px;  padding-top: 5px;&quot;&gt;
+                                                                 2994                                                        &lt;/div&gt;
+                                                         &lt;/div&gt;
+                                                     &lt;/td&gt;
+                                                 &lt;/tr&gt;
+                                             &lt;/table&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 101px;height: 74px;&quot;&gt;
+                                             &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; height=&quot;95%&quot; width=&quot;95%&quot; &gt;
+                                                 &lt;tr&gt;
+                                                     &lt;td align=&quot;center&quot; style=&quot;height:75px;&quot;&gt;
+                                                         &lt;div align=&quot;center&quot; style=&quot;font-size: 10px;text-align: center;&quot;&gt;
+                                                              Situação
+                                                         &lt;/div&gt;
+                                                         &lt;div align=&quot;center&quot; style=&quot;height: auto;text-align: center;font-weight: bold;font-size: 12px;  padding-top: 5px;&quot;&gt;
+                                                             &lt;situacao&gt;Emitido&lt;/situacao&gt;
+                                                         &lt;/div&gt;
+                                                     &lt;/td&gt;
+                                                 &lt;/tr&gt;
+                                             &lt;/table&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;min-width: 93px;height: 148px;float:right;&quot;&gt;
+                                         &lt;div style=&quot;min-width: 93px;height: 148px;&quot;&gt;
+                                                                                                     &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot; &gt;
+                                                         &lt;tr&gt;
+                                                             &lt;td align=&quot;center&quot; style=&quot;padding-left:8px;height:148px;&quot;&gt;
+                                                                 &lt;img align=&quot;center&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSAQMAAAD94hHYAAAABlBMVEX///8AAABVwtN+AAAA7ElEQVQokbXSsYpEMQgFUCGtkF8JpBXy64Kt4K8EbAUn7NudN+NsO7fJCQS5AQG+nQz05j25mFEXhkK1KTgmxqfDvOs/HtCeb24zutBz/u0MPbGsBlgd51/r22mncvNZHYKRoo2LFynhxTfbBpeYWO1K5ri5egm3NXFycXYTpnb1ebEN6zIIq7dmG7alWjZGd/2Z+WpbY8HpB8VTzplO1UlshEOqg3fLxMXF5988KA2qt3RwimpFAdJkLj639M1RnbHXmJpQzAinBP/uxm1TNsNrBd6tre3m/GERFCQoZrSOcXV+dUY26CrV380DGu48YCGjROUAAAAASUVORK5CYII=&quot;&gt;
+                                                             &lt;/td&gt;
+                                                         &lt;/tr&gt;
+                                                     &lt;/table&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                                               &lt;!-- Nota cancelada--&gt;
+                                 
+                                                 &lt;cancelado&gt;&lt;/cancelado&gt;
+                                    
+                         &lt;!-- Informações prefeitura e tomador --&gt;
+                         &lt;div style=&quot; width:700px;padding-top: 5px; float:left&quot;&gt;
+                             &lt;div style=&quot;width: 700px;float:left;min-height: 264px;&quot;&gt;
+                                 &lt;div style=&quot;width: 700px;border-right:1px solid #000;border-top:1px solid #000;border-left:1px solid #000;float:left; &quot;&gt;
+                                     &lt;!-- NFSE - Nota Fiscal de Serviço Eletrônica --&gt;
+                                     &lt;div style=&quot;width:700px;height: 28px;float: left;&quot;&gt;
+                                         &lt;div style=&quot;width: 700px; height: 28px;float: left;font-size: 18px; text-align: center; border-bottom: 1px solid #000;font-weight: bold;&quot;&gt;
+                                             &lt;div style=&quot;padding-top: 4px; &quot;&gt;
+                                                 Nota Fiscal de Serviço Eletrônica - Série TESTE - DEMONSTRACAO                                        &lt;/div&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;!-- Informações Prefeitura --&gt;
+                                     &lt;div  style=&quot;width: 445px;height: 50px;float: left;&quot;&gt;
+                                         &lt;!-- Logo Prefeitura --&gt;
+                                         &lt;div style=&quot;;float:left;&quot;&gt;
+                                         &lt;div align='center' style=&quot;width: 50px;min-height:48px;float: left; text-align: center;padding-bottom: 2px;padding-top: 2px;&quot;&gt;
+                                             &lt;img src='http://demonstracao.nfs-e.net/datacenter/include/nfw/nfw_resize_img.php?img=brasao_9999.jpg&amp;w=50&amp;h=48&amp;origem=brasao'  border='0'&gt;                                  
+                                         &lt;/div&gt;
+                                         &lt;!-- Dados Prefeitura --&gt;
+                                         &lt;div  style=&quot;width: 385px; height:50px;float: left; text-align:center;&quot;&gt;
+                                             &lt;div style=&quot;font-weight: bold;font-size: 12px; height:16px; text-align: left;padding-top: 2px;padding-left:5px;&quot;&gt;
+                                                 ESTADO DEMONSTRAÇÃO                                        &lt;/div&gt;
+                                             &lt;div style=&quot;font-weight: bold; height:16px; font-size: 12px;text-align: left;padding-top: 2px;padding-left:5px;&quot;&gt;
+                                                 PREFEITURA DEMONSTRAÇÃO                                        &lt;/div&gt;
+                                             &lt;div  style=&quot;height:17px;text-align: left; padding-top: 2px;font-size: 12px;padding-left:5px;&quot;&gt;
+                                                 SECRETARIA DEMONSTRAÇÃO                                        &lt;/div&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;/div&gt;
+                                         &lt;div style=&quot;width: 250px;height: 55px;float: right;border-left:1px solid black&quot;&gt;
+                                             &lt;div style=&quot;width: 250px;height: 50px;float: right;&quot;&gt;
+                                                 &lt;div  style=&quot;height: 15px;font-size: 10px;text-align: center; padding-top: 9px;&quot;&gt;
+                                                     Autenticidade
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;text-align: center;font-weight: bold;font-size: 12px; padding-bottom: 5px; padding-top: 5px;&quot;&gt;
+                                                     0182910023252403                                            &lt;/div&gt;
+                                             &lt;/div&gt;
+                                         &lt;/div&gt;
+                  &lt;div style=&quot;min-width: 700px; width:700px;height: 50px;float: left;border-top:1px solid #000;&quot;&gt;
+                                         &lt;div style=&quot;width: 449px;height: 50px;float: left;border-right: 1px solid #000; &quot;&gt;
+                                             &lt;div style=&quot;width: 221px;height: 50px;border-right: 1px solid #000;float: left;&quot;&gt;
+                                                 &lt;div  style=&quot;height: 15px;font-size: 10px;text-align: center; padding-top: 9px;&quot;&gt;
+                                                     Número / Série RPS
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;text-align: center;font-weight: bold;font-size: 12px; padding-bottom: 5px; padding-top: 5px;&quot;&gt;
+                                                     1000 / TESTE - DEMONSTRACAO                                            &lt;/div&gt;
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;width: 221px;height: 47px;float: left;&quot;&gt;
+                                                 &lt;div style=&quot;height: 15px;font-size: 10px;text-align: center; padding-top: 9px;&quot;&gt;
+                                                     Data Fato Gerador
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;text-align: center;font-weight: bold;font-size: 12px; padding-bottom: 5px; padding-top: 5px;&quot;&gt;
+                                                     01/08/2019                                            &lt;/div&gt;
+                                             &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 246px;height: 50px;float: left;&quot;&gt;
+                                             &lt;div style=&quot;width: 122px;height: 50px;float: left;&quot;&gt;
+                                                 &lt;div  style=&quot;height: 15px;font-size: 10px;text-align: center; padding-top: 9px;&quot;&gt;
+                                                     Data Emissão
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;text-align: center;font-weight: bold;font-size: 12px; padding-bottom: 5px; padding-top: 5px;&quot;&gt;
+                                                     01/08/2019                                            &lt;/div&gt;
+                                             &lt;/div&gt;
+     
+                                             &lt;div style=&quot;width:122px;height: 50px;border-left: 1px solid #000;float: left;&quot;&gt;
+                                                 &lt;div style=&quot;height: 15px;font-size: 10px;text-align: center; padding-top: 9px;&quot;&gt;
+                                                     Hora Emissão
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;text-align: center;font-weight: bold;font-size: 12px; padding-bottom: 5px; padding-top: 5px;&quot;&gt;
+                                                     14:28:29                                            &lt;/div&gt;
+                                             &lt;/div&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+            
+                                 &lt;/div&gt;
+                                 &lt;!-- Tomador --&gt;
+                                 &lt;div style=&quot;min-width: 700px;float:left; width:700px;border:1px solid #000;&quot;&gt;
+                                     &lt;div style=&quot;min-width: 700px; width:100%;height: 20px;text-align: center;border-bottom: 1px solid #000;font-size: 12px;background-color: #C2C2C2;&quot;&gt;
+                                         &lt;div style=&quot;padding-top: 3px;&quot;&gt;
+                                             TOMADOR DO SERVIÇO
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                                                     
+                                     &lt;!-- Nome/Razão Social e CPF/CNPJ --&gt;
+                                     &lt;div style=&quot;min-width: 700px; width:700px;height: 30px;border-bottom: 1px solid #000;&quot;&gt;
+                                         &lt;div style=&quot;width: 497px;height: 30px;float:left;padding-left: 2px;padding-bottom: 0px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;color:#000;font-weight: normal;text-align: left;padding-top:2px;&quot;&gt;
+                                                 Nome                                        &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 12px;height: 16px;  text-align: left;padding-bottom: 3px;&quot;&gt;
+                                                 
+                                                 
+                                                                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                                                                 &lt;div style=&quot;width: 190px;height: 30px;float:left;border-left:1px solid #000;padding-left: 2px;&quot;&gt;
+                                                 &lt;div  style=&quot;text-align: left;padding-top: 2px;color:#000;font-weight: normal; height:15px&quot; class=&quot;label&quot;&gt;
+                                                     CPF/CNPJ
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;font-size: 11px;  text-align: left; height:15px;padding-bottom: 3px;&quot;&gt;
+                                                                                                 &lt;/div&gt;
+                                             &lt;/div&gt;
+                                                                         &lt;/div&gt;
+                                                                         
+                                     
+                                     &lt;!-- Endereço, Número e Complemento --&gt;
+                                     &lt;div style=&quot;min-width: 700px; width:700px;height: 30px;border-bottom: 1px solid #000;&quot;&gt;
+                                         &lt;div style=&quot;width: 300px;height: 30px;float:left;padding-left: 2px;padding-bottom: 0px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;color:#000;font-weight: normal;text-align: left;padding-top:2px;&quot;&gt;
+                                                 Endereço
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 12px;height: 16px;  text-align: left;padding-bottom: 3px;&quot;&gt;
+                                                                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 194px;height: 30px;float:left;border-left: 1px solid #000;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;color:#000;font-weight: normal;text-align: left;padding-top: 2px;&quot;&gt;
+                                                 Número
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 11px; height: 16px; text-align: left;padding-bottom: 3px;&quot;&gt;
+                                                                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 193px;height: 30px;float:left;border-left: 1px solid #000;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;color:#000;font-weight: normal;text-align: left;padding-top:2px;&quot;&gt;
+                                                 Complemento
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 11px; height: 16px;  text-align: left;padding-bottom: 3px;&quot;&gt;
+                                                                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;!-- Bairro, CEP e Cidade - Estado --&gt;
+                                     &lt;div style=&quot;min-width: 700px; width:700px;height: 30px;&quot;&gt;
+                                         &lt;div style=&quot;width: 300px;height: 30px;float:left;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;text-align: left;padding-top: 2px;&quot;&gt;
+                                                 Bairro
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 12px;height: 16px;  text-align: left;&quot;&gt;
+                                                                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 194px;height: 30px;float:left;border-left: 1px solid #000;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;text-align: left;padding-top: 2px;&quot;&gt;
+                                                 CEP
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 11px; height: 16px; text-align: left;&quot;&gt;
+                                                                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 193px;height: 30px;float:left;border-left: 1px solid #000;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;text-align: left;padding-top: 2px;&quot;&gt;
+                                                 Cidade - Estado
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 11px; height: 16px; text-align: left;padding-bottom: 3px;&quot;&gt;
+                                                  -                                         &lt;/div&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                     
+                         &lt;!-- Informações dos Serviços --&gt;
+                         &lt;div style=&quot;min-width: 700px; width:700px;padding-top: 5px;float:left;&quot;&gt;
+                             &lt;div style=&quot;min-width: 700px;float:left; width:700px;border-right:1px solid #000;border-left:1px solid #000; &quot;&gt;
+                                 &lt;div style=&quot; width:700px;height: 20px;border-top:1px solid #000;text-align: center;border-bottom: 1px solid #000;font-size: 12px;background-color: #C2C2C2;&quot;&gt;
+                                     &lt;div style=&quot;padding-top: 3px;&quot;&gt;
+                                         DESCRIÇÃO DOS SERVIÇOS PRESTADOS
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                                 &lt;div style=&quot;min-width: 700px; width:700px;height: 18px;text-align: center;font-size: 11px;  border-bottom: 1px solid #000;&quot;&gt;
+                                     &lt;div style=&quot;width: 50px;height: 15px;padding-top: 3px;padding-left: 2px;float:left;&quot;&gt;
+                                         Serviço
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width: 60px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Quant.
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width: 43px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Unid.
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width: 85px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Vlr. Unid.
+                                     &lt;/div&gt;
+                                     
+                                     &lt;div style=&quot;width:  77px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Local Prest.
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width:  69px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Alíquota
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width:  59px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Sit. Trib.
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width:  100px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Vlr. Trib.
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width:  69px ;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Dedução
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width:  62px;height: 15px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         Vlr. ISSRF
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                                 &lt;div style=&quot;min-width: 700px; width:700px;height:auto;float:left;text-align: center;font-size: 11px;  padding:0px;margin:0px; border-bottom:1px solid #999999;&quot;&gt;
+                                     &lt;div style=&quot;width:50px;font-weight:bold;font-size: 11px;padding-top: 3px;height:14px;padding-left: 2px;float:left;text-align: center; &quot;&gt;
+                                         102                                &lt;/div&gt;
+                                     &lt;div style=&quot;width: 60px;height: 14px;padding-top: 3px;float:left;border-left: 1px solid #000;text-align:center;&quot;&gt;
+                                         -                                &lt;/div&gt;
+                                     &lt;div style=&quot;width: 43px;height: 14px;padding-top: 3px;float:left;text-align:center;border-left: 1px solid #000;&quot;&gt;
+                                         -                                &lt;/div&gt;
+                                     &lt;div style=&quot;width: 85px;height: 14px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         -                                &lt;/div&gt;
+                                          
+                                     &lt;div style=&quot;width: 77px;height: 14px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         8685                                &lt;/div&gt;
+                                     &lt;div style=&quot;width: 69px;height: 14px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         2.00 %
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;width: 59px;height: 14px;padding-top: 3px;float:left;border-left: 1px solid #000;&quot;&gt;
+                                         TI                                    &lt;/div&gt;
+                                     &lt;div style=&quot;width: 99px;height: 14px;padding-top: 3px;float:left;text-align: right;padding-right: 1px;border-left: 1px solid #000;&quot;&gt;
+                                         1.000,00                                &lt;/div&gt;
+                                     &lt;div style=&quot;width: 67px;height: 14px;padding-top: 3px;float:left;text-align: right;padding-right: 2px;border-left: 1px solid #000;&quot;&gt;
+                                         0,00                                &lt;/div&gt;
+                                     &lt;div style=&quot;width: 72px;height: 14px;padding-top: 3px;float:left;text-align: right;padding-right: 2px;border-left: 1px solid #000;&quot;&gt;
+                                         0,00                                &lt;/div&gt;
+                                 &lt;/div&gt;
+                                     &lt;div style=&quot;min-width: 700px; width:700px;float:left;height: auto;text-align: left;font-size: 11px; &quot;&gt;
+                                         &lt;div style=&quot;width: 700px;min-height: 14px;padding-top: 1px;float:left;text-align: right;padding-right: 2px;border-bottom:1px solid #000;&quot;&gt;
+                                             &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;
+                                                 &lt;tr&gt;
+                                                     &lt;td style=&quot;font-size: 11px; font-family:Calibri;height: 14px;text-align:justify;padding-left: 2px;  &quot;&gt;
+                                                         &lt;b&gt;Descrição do Serviço:&lt;/b&gt; teste                                                &lt;/td&gt;
+                                                 &lt;/tr&gt;
+                                             &lt;/table&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                            
+                             
+                                 &lt;div style=&quot;min-width: 700px; width:700px;height: 18px;text-align: center;font-size: 11px;  &quot;&gt;
+                                     &lt;div style=&quot;width: 50px;min-height: 15px;padding-top: 3px;padding-left: 2px;float:left;text-align: left;&quot;&gt;&lt;/div&gt;
+                                      &lt;div style=&quot;width: 50px;min-height: 15px;padding-top: 3px;float:left;text-align:right;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 54px;min-height: 15px;padding-top: 3px;float:left;text-align:center;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 85px;min-height: 15px;padding-top: 3px;float:left;text-align:right;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 62px;min-height: 15px;padding-top: 3px;float:left;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 54px;min-height: 15px;padding-top: 3px;float:left;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 44px;min-height: 15px;padding-top: 3px;float:left;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 67px;min-height: 15px;padding-top: 3px;float:left;text-align: right;padding-right: 2px;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 53px;min-height: 15px;padding-top: 3px;float:left;text-align: right;padding-right: 2px;&quot;&gt;&lt;/div&gt;
+                                     &lt;div style=&quot;width: 54px;min-height: 15px;padding-top: 3px;float:left;text-align: right;padding-right: 2px;&quot;&gt;&lt;/div&gt;
+                                 &lt;/div&gt;
+                             
+                             &lt;/div&gt;
+                             &lt;div style=&quot;min-width: 700px; float:left; width:700px;border-left:1px solid #000;border-bottom:1px solid #000;border-right:1px solid #000;margin-bottom: 5px;&quot;&gt;
+                                 &lt;div style=&quot;min-width: 700px; width:700px;font-size: 11px;   border-top:1px solid #000; height:60px; &quot;&gt;
+                                     &lt;!-- Totais --&gt;
+                                     &lt;div style=&quot;min-width: 700px; width:700px;height: 31px;background-color: #C2C2C2; border-bottom:1px solid black;&quot;&gt;
+                                         &lt;div style=&quot;width: 113px;background-color: #fff;min-height: 31px;float:left;padding-left: 2px;border-right: 1px solid #000;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;text-align: center;&quot;&gt;
+                                                 Base de Cálculo
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 12px; height:15px; text-align: right;padding-right: 2px;&quot;&gt;
+                                                 1.000,00                                        &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 113px;background-color: #fff;min-height: 31px;float:left;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;height:15px; font-size: 10px;text-align: center;&quot;&gt;
+                                                 Valor ISSQN
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 11px;height: 15px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                                 20,00                                        &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 113px;min-height: 31px;background-color: #fff;float:left;border-left: 1px solid #000;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;text-align: center;&quot;&gt;
+                                                 Valor ISSRF
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 12px; height:15px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                                 0,00                                        &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 113px;;min-height: 31px;background-color: #fff;float:left;border-left: 1px solid #000;padding-left: 2px;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;text-align: center;&quot;&gt;
+                                                 Desconto
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 12px;height:15px;   text-align: right;padding-right: 2px;&quot;&gt;
+                                                 0,00                                        &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width:113px;min-height: 31px;float:left;border-left: 1px solid #000;padding-left: 2px;font-weight: bold;background-color: #C2C2C2;&quot;&gt;
+                                             &lt;div style=&quot;height: 15px;font-size: 10px;text-align: center;&quot;&gt;
+                                                 Valor Total
+                                             &lt;/div&gt;
+                                             &lt;div style=&quot;font-size: 12px; height:15px;  text-align: right;padding-right: 5px;&quot;&gt;
+                                                 1.000,00                                        &lt;/div&gt;
+                                         &lt;/div&gt;
+                                         &lt;div style=&quot;width: 117px;min-height: 30px;float:left;&quot;&gt;
+                                             &lt;div style=&quot;width: 117px;min-height: 31px;float:left;border-left: 1px solid #000;padding-left: 2px;font-weight: bold;&quot;&gt;
+                                                 &lt;div style=&quot;height: 15px;font-size: 10px;text-align: center;&quot;&gt;
+                                                     Valor Líquido
+                                                 &lt;/div&gt;
+                                                 &lt;div style=&quot;font-size: 12px;height:15px;   text-align: right;margin-right: 5px;&quot;&gt;
+                                                     1.000,00                                            &lt;/div&gt;
+                                             &lt;/div&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+      
+     &lt;div style=&quot;min-width: 700px; width:700px;height: 30px;text-align: center;&quot;&gt;
+         
+         
+         
+         
+     &lt;!--        &lt;div style=&quot;width: ;height: 28px;float:left;padding-left: 2px;border-right: &quot;&gt;
+                 &lt;div class=&quot;label&quot; style=&quot;height:15px;text-align: center;&quot;&gt;
+                                 &lt;/div&gt;
+                 &lt;div style=&quot;font-size: 12px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                 &lt;/div&gt;
+             &lt;/div&gt;--&gt;
+             &lt;div style=&quot;width: 113px; height: 32px;  float:left;padding-left:2px;padding-top:2px;border-right: 1px solid #000;&quot;&gt;
+                 &lt;div style='height: 15px; width:99%; float:left;font-size: 10px;  text-align: center'&gt;&lt;span style='line-height:1'&gt;IR&lt;/span&gt;&lt;/div&gt;            &lt;div style=&quot;font-size: 12px; height: 15px; line-height:1; text-align: right;padding-right: 2px;&quot;&gt;
+                     &lt;span style=&quot;text-align:right&quot;&gt;
+                         0,00                &lt;/span&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+             
+     &lt;!--        &lt;div style=&quot;width: ;height: 28px;float:left;padding-left: 2px;border-right: &quot;&gt;
+                 &lt;div class=&quot;label&quot; style=&quot;height:15px;text-align: center;&quot;&gt;
+                                 &lt;/div&gt;
+                 &lt;div style=&quot;font-size: 12px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                 &lt;/div&gt;
+             &lt;/div&gt;--&gt;
+             &lt;div style=&quot;width: 113px; height: 32px;  float:left;padding-left:2px;padding-top:2px;border-right: 1px solid #000;&quot;&gt;
+                 &lt;div style='height: 15px; width:99%; float:left;font-size: 10px;  text-align: center'&gt;&lt;span style='line-height:1'&gt;INSS&lt;/span&gt;&lt;/div&gt;            &lt;div style=&quot;font-size: 12px; height: 15px; line-height:1; text-align: right;padding-right: 2px;&quot;&gt;
+                     &lt;span style=&quot;text-align:right&quot;&gt;
+                         0,00                &lt;/span&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+             
+     &lt;!--        &lt;div style=&quot;width: ;height: 28px;float:left;padding-left: 2px;border-right: &quot;&gt;
+                 &lt;div class=&quot;label&quot; style=&quot;height:15px;text-align: center;&quot;&gt;
+                                 &lt;/div&gt;
+                 &lt;div style=&quot;font-size: 12px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                 &lt;/div&gt;
+             &lt;/div&gt;--&gt;
+             &lt;div style=&quot;width: 113px; height: 32px;  float:left;padding-left:2px;padding-top:2px;border-right: 1px solid #000;&quot;&gt;
+                 &lt;div style='height: 15px; width:99%; float:left;font-size: 10px;  text-align: center'&gt;&lt;span style='line-height:1'&gt;CSLL&lt;/span&gt;&lt;/div&gt;            &lt;div style=&quot;font-size: 12px; height: 15px; line-height:1; text-align: right;padding-right: 2px;&quot;&gt;
+                     &lt;span style=&quot;text-align:right&quot;&gt;
+                         0,00                &lt;/span&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+             
+     &lt;!--        &lt;div style=&quot;width: ;height: 28px;float:left;padding-left: 2px;border-right: &quot;&gt;
+                 &lt;div class=&quot;label&quot; style=&quot;height:15px;text-align: center;&quot;&gt;
+                                 &lt;/div&gt;
+                 &lt;div style=&quot;font-size: 12px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                 &lt;/div&gt;
+             &lt;/div&gt;--&gt;
+             &lt;div style=&quot;width: 113px; height: 32px;  float:left;padding-left:2px;padding-top:2px;border-right: 1px solid #000;&quot;&gt;
+                 &lt;div style='height: 15px; width:99%; float:left;font-size: 10px;  text-align: center'&gt;&lt;span style='line-height:1'&gt;COFINS&lt;/span&gt;&lt;/div&gt;            &lt;div style=&quot;font-size: 12px; height: 15px; line-height:1; text-align: right;padding-right: 2px;&quot;&gt;
+                     &lt;span style=&quot;text-align:right&quot;&gt;
+                         0,00                &lt;/span&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+             
+     &lt;!--        &lt;div style=&quot;width: ;height: 28px;float:left;padding-left: 2px;border-right: &quot;&gt;
+                 &lt;div class=&quot;label&quot; style=&quot;height:15px;text-align: center;&quot;&gt;
+                                 &lt;/div&gt;
+                 &lt;div style=&quot;font-size: 12px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                 &lt;/div&gt;
+             &lt;/div&gt;--&gt;
+             &lt;div style=&quot;width: 113px; height: 32px;  float:left;padding-left:2px;padding-top:2px;border-right: 1px solid #000;&quot;&gt;
+                 &lt;div style='height: 15px; width:99%; float:left;font-size: 10px;  text-align: center'&gt;&lt;span style='line-height:1'&gt;PIS&lt;/span&gt;&lt;/div&gt;            &lt;div style=&quot;font-size: 12px; height: 15px; line-height:1; text-align: right;padding-right: 2px;&quot;&gt;
+                     &lt;span style=&quot;text-align:right&quot;&gt;
+                         0,00                &lt;/span&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+             
+     &lt;!--        &lt;div style=&quot;width: ;height: 28px;float:left;padding-left: 2px;border-right: &quot;&gt;
+                 &lt;div class=&quot;label&quot; style=&quot;height:15px;text-align: center;&quot;&gt;
+                                 &lt;/div&gt;
+                 &lt;div style=&quot;font-size: 12px;  text-align: right;padding-right: 2px;&quot;&gt;
+                                 &lt;/div&gt;
+             &lt;/div&gt;--&gt;
+             &lt;div style=&quot;width: 114px; height: 32px;  float:left;padding-left:2px;padding-top:2px;border-right: 0px solid #000;&quot;&gt;
+                 &lt;div style='height: 15px;width:100%;line-height:1;float:left; font-size: 8px; text-align: center;'&gt;&lt;span style='line-height:1'&gt;Retenção para a Previdência Social&lt;/span&gt;&lt;/div&gt;            &lt;div style=&quot;font-size: 12px; height: 15px; line-height:1; text-align: right;padding-right: 2px;&quot;&gt;
+                     &lt;span style=&quot;text-align:right&quot;&gt;
+                         0,00                &lt;/span&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+             
+     &lt;/div&gt;
+             &lt;div style=&quot;min-width: 700px; width:700px;height: auto;text-align: center;border-top: 1px solid #000;font-size: 12px;float:left;&quot;&gt;
+                 &lt;div style=&quot;height: 15px;font-size: 10px;text-align: left;padding-left: 2px;&quot;&gt;
+                     Condição de Pagamento: À Vista            &lt;/div&gt;                                
+            &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+              &lt;div style=&quot;min-width: 700px; width:700px;height: auto;text-align: center;border: 1px solid #000;font-size: 12px;float:left;&quot;&gt;
+                 &lt;div style=&quot;height: 15px;font-size: 10px;text-align: left;padding-left: 2px;&quot;&gt;
+                    Informações Complementares:
+                 &lt;/div&gt; 
+                 &lt;div style=&quot;font-size: 11px;  text-align: justify; padding-right: 5px;padding-left: 3px;padding-bottom: 5px;&quot;&gt;
+                     &lt;table id=&quot;tableGenericos&quot; width=&quot;100%&quot;  border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+                                                     &lt;tr&gt;
+                                     &lt;td valign='top' style='padding-left: 5px'&gt;
+                                         &lt;span class='style5' style='font-size:11px;'&gt;
+                                             :
+                                         &lt;/span&gt;
+                                         &lt;span class='style9' style='font-size:11px;'&gt;
+                                             &lt;p&gt;NOTA EMITIDA EM AMBIENTE DE DEMONSTRA&amp;Ccedil;&amp;Atilde;O, N&amp;Atilde;O POSSUI VALOR FISCAL&lt;/p&gt;                                    &lt;/span&gt;
+                                     &lt;/td&gt;
+                                 &lt;/tr&gt;
+                                             &lt;/table&gt;
+                 &lt;/div&gt;    
+              &lt;/div&gt;
+          
+                             &lt;!-- Descrição dos subitens, legenda e outras informações  --&gt;
+                         &lt;/div&gt;
+                         &lt;div style=&quot;min-width: 700px; width:700px;padding-top: 5px; float: left;&quot;&gt;
+                             &lt;div style=&quot;min-width: 700px; width:700px;float:left&quot;&gt;
+                                 &lt;div style=&quot;min-width: 700px; width:700px;float:left;border-left:1px solid #000;border-right:1px solid #000;&quot;&gt;
+                                     &lt;div style=&quot;height: 15px;font-size: 10px;text-align: left;padding-left: 2px;border-top:1px solid #000; width: 699px; &quot;&gt;
+                                                                             Descrição dos subitens da lista de serviço em acordo com Lei Complementar 116/03                                &lt;/div&gt;
+                                     &lt;div style=&quot;font-size: 11px;   padding-right: 5px;padding-left: 3px;padding-bottom: 5px;&quot;&gt;
+                                         &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width: 695px;font-size: 11px;  &quot;&gt;
+                                                                                         &lt;tr&gt;
+                                                     &lt;td style=&quot;width: 35px; vertical-align: top;padding-top: 2px;&quot;&gt;
+                                                         &lt;div style=&quot;width: 25px;float: left;&quot;&gt;102&lt;/div&gt;
+                                                         
+                                                     &lt;/td&gt;
+                                                     &lt;td style=&quot;width: 10px; vertical-align: top;padding-top: 2px;&quot;&gt;
+                                                        &lt;div style=&quot;width: 10px;float: right;text-align: center;&quot;&gt;-&lt;/div&gt;
+                                                         
+                                                     &lt;/td&gt;
+                                                     &lt;td style=&quot;width: 650px;text-align: justify;padding-right: 5px;padding-top: 2px;&quot;&gt;
+                                                         Programação.                                                      &lt;/td&gt;
+                                                 &lt;/tr&gt;
+                                                                                     &lt;/table&gt;
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;height: 15px;font-size: 10px;text-align: left;border-top:1px solid #000;padding-left: 2px;&quot;&gt;
+                                         Legenda do local da prestação do serviço
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;font-size: 11px;  text-align: justify; padding-right: 5px;padding-left: 3px;padding-bottom: 5px;border-bottom:1px solid #000;&quot;&gt;
+                                         &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width: 685px;font-size: 11px;  &quot;&gt;
+                                                 &lt;tr&gt;
+                                                     &lt;td style=&quot;width: 25px; vertical-align: top;padding-top: 2px;&quot;&gt;
+                                                         &lt;div style=&quot;width: 25px;float: left;&quot;&gt;8685&lt;/div&gt;
+                                                     &lt;/td&gt;
+                                                     &lt;td style=&quot;width: 10px; vertical-align: top;padding-top: 2px;&quot;&gt;
+                                                         &lt;div style=&quot;width: 10px;float: right;text-align: center;&quot;&gt;-&lt;/div&gt;
+                                                     &lt;/td&gt;
+                                                     &lt;td style=&quot;width: 640px;text-align: justify;padding-right: 5px;padding-top: 2px;&quot;&gt;
+                                                         GUAIBA - RS                                                &lt;/td&gt;
+                                                 &lt;/tr&gt;  
+                                         &lt;/table&gt;
+                                     &lt;/div&gt;
+                                     
+                                     &lt;div   style=&quot;text-align: left;padding-left: 2px;float:left;height: 15px;font-size: 10px;&quot;&gt;
+                                         Outras Informações
+                                     &lt;/div&gt;
+                                     &lt;div style=&quot;font-size: 11px;text-align: justify; padding-right: 5px;padding-left: 3px;padding-bottom: 5px;border-bottom:1px solid #000;&quot;&gt;
+                                         &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width: 695px;text-align: justify;font-size: 11px;&quot;&gt;
+                                                                                         &lt;tr&gt;
+                                                   &lt;td&gt;
+                                                       &lt;span class=&quot;style10&quot; style=&quot;border-right: #ffffff 0px none;&quot;&gt; &lt;span &gt;TI     - Tributada Integralmente.&lt;/span&gt;&lt;/span&gt;
+                                                   &lt;/td&gt;
+                                                 &lt;/tr&gt;
+                                              
+                                             &lt;tr&gt;
+                                                 &lt;td style=&quot;width: 685px;text-align: justify;padding-right: 5px;padding-top: 4px;&quot;&gt;
+                                                     (102) Serviço Tributado no município do prestador.                                            &lt;/td&gt;
+                                             &lt;/tr&gt;
+                                             &lt;tr&gt;
+                                                 &lt;td style=&quot;width: 685px;text-align: justify;padding-right: 5px;padding-top: 4px;&quot;&gt;
+                                                                                                     Autorização para emissão de Nota Fiscal de Serviço Eletrônica: 152/2015 de 20/02/2017.
+                                                                                                 &lt;/td&gt;
+                                             &lt;/tr&gt;
+                                                                  &lt;tr&gt;
+                                         &lt;td style=&quot;width: 685px;text-align: justify;padding-right: 5px;padding-top: 4px;&quot;&gt;
+                                             A data de vencimento do ISS quando o mesmo for devido no município do Prestador: 25/09/2019.
+                                         &lt;/td&gt;
+                                     &lt;/tr&gt;
+                                                                        
+                                             &lt;tr&gt;
+                                                 &lt;td style=&quot;width: 685px;text-align: justify;padding-right: 5px;padding-top: 4px;&quot;&gt;
+                                                     A veracidade das informações declaradas na NFs-e podem ser consultadas no site: DEPARTAMENTO DESMONSTRAÇÃO .
+                                                 &lt;/td&gt;
+                                             &lt;/tr&gt;
+                                             &lt;tr&gt;
+                                                 &lt;td style=&quot;width: 685px;text-align: justify;padding-right: 5px;padding-top: 4px;&quot;&gt;
+                                                     Valor aproximado dos tributos: Federais R$ 134,50&amp;nbsp;(13.45%),&amp;nbsp;Estaduais R$ 0,00&amp;nbsp;(0.00%),&amp;nbsp;Municipais R$ 33,10&amp;nbsp;(3.31%), com base na Lei 12.741/2012 e no Decreto 8.264/2014 - Fonte: IBPT.
+                                                 &lt;/td&gt;
+                                             &lt;/tr&gt;
+                                          &lt;tr&gt;
+                                                 &lt;td style=&quot;width: 685px;text-align: justify;padding-right: 5px;padding-top: 2px;&quot;&gt;
+                                                     &lt;h1 style=&quot;color:red&quot;&gt;&lt;center&gt;&lt;b&gt; DOCUMENTO SEM VALOR FISCAL, EMITIDO EM AMBIENTE DE DEMONSTRAÇÃO&lt;/b&gt;&lt;/center&gt;&lt;/h1&gt;                                            &lt;/td&gt;
+                                             &lt;/tr&gt;
+      
+                                             &lt;tr&gt;
+                                                 &lt;td style=&quot;width: 685px;text-align: justify;padding-right: 5px;padding-top: 4px;&quot;&gt;
+                                                     Usuário responsável pela emissão: 006.744.550-02 - CRISTIAN DE FREITAS DUTRA                                            &lt;/td&gt;                                             
+                                             &lt;/tr&gt; 
+                                             &lt;usu_cancelamento&gt;&lt;/usu_cancelamento&gt;
+                                             &lt;dados_substituicao&gt;&lt;/dados_substituicao&gt;
+                                         &lt;/table&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+     
+                         &lt;div style=&quot;min-width: 700px; width:700px;padding-right: 5px;font-size: 10px;text-align: right;&quot;&gt;
+                             Software FiscalWeb- IPM Sistemas - Protegido por Lei.
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;div style=&quot;float: left; padding-left:3px;&quot;&gt;
+                         &lt;img src=&quot;http://demonstracao.nfs-e.net/datacenter/imagem/sistemas//legenda_modelo_nf.png&quot; border=&quot;0&quot; &gt;                   
+                     &lt;/div&gt;               
+                 &lt;/div&gt;
+             &lt;/center&gt;
+         &lt;/body&gt;
+     &lt;/html&gt;
+    </codigo_html>
+  </retorno>
