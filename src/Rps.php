@@ -19,6 +19,7 @@ use stdClass;
 use NFePHP\NFSeIPM\RpsInterface;
 use NFePHP\NFSeIPM\Common\Factory;
 use JsonSchema\Validator as JsonValid;
+use NFePHP\Common\Strings;
 
 class Rps implements RpsInterface
 {
@@ -51,7 +52,7 @@ class Rps implements RpsInterface
     {
         $this->init($rps);
     }
-    
+
     /**
      * Convert Rps::class data in XML
      * @return string
@@ -61,7 +62,7 @@ class Rps implements RpsInterface
         $fac = new Factory($this->std, $this->sign, $this->teste);
         return $fac->render();
     }
-    
+
     /**
      * Mark signature is necessary
      * @param bool $flag
@@ -70,7 +71,7 @@ class Rps implements RpsInterface
     {
         $this->sign = $flag;
     }
-    
+
     /**
      * Mark as test
      * @param bool $flag
@@ -80,7 +81,6 @@ class Rps implements RpsInterface
         $this->teste = $flag;
     }
 
-    
     /**
      * Inicialize properties and valid input
      * @param stdClass $rps
@@ -91,7 +91,7 @@ class Rps implements RpsInterface
         $this->jsonschema = realpath("../storage/jsonSchemes/rps.schema");
         $this->validInputData($this->std);
     }
-    
+
     /**
      * Change properties names of stdClass to lower case
      * @param stdClass $data

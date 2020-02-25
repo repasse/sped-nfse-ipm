@@ -14,10 +14,9 @@ namespace NFePHP\NFSeIPM\Common;
  * @author    Roberto L. Machado <linux.rlm at gmail dot com>
  * @link      http://github.com/nfephp-org/sped-nfse-ipm for the canonical source repository
  */
-use NFePHP\Common\Certificate;
+
 use NFePHP\Common\DOMImproved as Dom;
 use stdClass;
-use DOMNode;
 use DOMElement;
 
 class Factory
@@ -37,7 +36,7 @@ class Factory
      * @var DOMElement
      */
     protected $rps;
-   
+
     /**
      * Constructor
      * @param stdClass $std
@@ -108,7 +107,7 @@ class Factory
             );
             $this->rps->appendChild($node);
         }
-        
+
         if (!empty($this->std->pedagio)) {
             $pedagio = $this->std->pedagio;
             $node = $this->dom->createElement('pedagio');
@@ -120,7 +119,7 @@ class Factory
             );
             $this->rps->appendChild($node);
         }
-        
+
         $nf = $this->std->nf;
         $node = $this->dom->createElement('nf');
         $this->dom->addChild(
@@ -184,7 +183,7 @@ class Factory
             false
         );
         $this->rps->appendChild($node);
-        
+
         $prestador = $this->std->prestador;
         $node = $this->dom->createElement('prestador');
         $this->dom->addChild(
@@ -200,7 +199,7 @@ class Factory
             false
         );
         $this->rps->appendChild($node);
-        
+
         $tom = $this->std->tomador;
         $node = $this->dom->createElement('tomador');
         $this->dom->addChild(
@@ -342,7 +341,7 @@ class Factory
             false
         );
         $this->rps->appendChild($node);
-        
+
         $itens = $this->dom->createElement('itens');
         foreach ($this->std->itens as $item) {
             $node = $this->dom->createElement('lista');
@@ -388,7 +387,7 @@ class Factory
                 isset($item->unidade_valor_unitario) ? number_format($item->unidade_valor_unitario, 2, ',', '') : null,
                 false
             );
-            
+
             $this->dom->addChild(
                 $node,
                 "aliquota_item_lista_servico",
@@ -422,39 +421,43 @@ class Factory
             $itens->appendChild($node);
         }
         $this->rps->appendChild($itens);
-        foreach ($this->std->genericos as $generico) {
-            $genericos = $this->dom->createElement('genericos');
-            $linha = $this->dom->createElement('linha');
-            $this->dom->addChild(
-                $linha,
-                "titulo",
-                isset($generico->titulo) ? $generico->titulo : '',
-                true
-            );
-            $this->dom->addChild(
-                $linha,
-                "descricao",
-                isset($generico->descricao) ? $generico->descricao : '',
-                true
-            );
-            $genericos->appendChild($linha);
-            $this->rps->appendChild($genericos);
+        if (!empty($this->std->genericos)) {
+            foreach ($this->std->genericos as $generico) {
+                $genericos = $this->dom->createElement('genericos');
+                $linha = $this->dom->createElement('linha');
+                $this->dom->addChild(
+                    $linha,
+                    "titulo",
+                    isset($generico->titulo) ? $generico->titulo : '',
+                    true
+                );
+                $this->dom->addChild(
+                    $linha,
+                    "descricao",
+                    isset($generico->descricao) ? $generico->descricao : '',
+                    true
+                );
+                $genericos->appendChild($linha);
+                $this->rps->appendChild($genericos);
+            }
         }
-        foreach ($this->std->produtos as $produto) {
-            $produtos = $this->dom->createElement('produtos');
-            $this->dom->addChild(
-                $produtos,
-                "descricao",
-                isset($produto->descricao) ? $produto->descricao : '',
-                true
-            );
-            $this->dom->addChild(
-                $produtos,
-                "valor",
-                !empty($produto->valor) ? number_format($produto->valor, 2, ',', '') : '',
-                true
-            );
-            $this->rps->appendChild($produtos);
+        if (!empty($this->std->produtos)) {
+            foreach ($this->std->produtos as $produto) {
+                $produtos = $this->dom->createElement('produtos');
+                $this->dom->addChild(
+                    $produtos,
+                    "descricao",
+                    isset($produto->descricao) ? $produto->descricao : '',
+                    true
+                );
+                $this->dom->addChild(
+                    $produtos,
+                    "valor",
+                    !empty($produto->valor) ? number_format($produto->valor, 2, ',', '') : '',
+                    true
+                );
+                $this->rps->appendChild($produtos);
+            }
         }
         $this->dom->appendChild($this->rps);
         return $this->dom->saveXML($this->rps);

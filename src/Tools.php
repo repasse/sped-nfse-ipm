@@ -25,16 +25,16 @@ use DateTime;
 
 class Tools extends BaseTools
 {
-       
+
     protected $xsdpath;
-    
+
     public function __construct($config, Certificate $cert = null)
     {
         parent::__construct($config, $cert);
         $path = realpath(__DIR__ . '/../storage/schemes');
         $this->xsdpath = $path;
     }
-    
+
     /**
      * Consulta de NFSe
      * @param string $codigo
@@ -43,8 +43,12 @@ class Tools extends BaseTools
      * @param string $cadastro
      * @return string
      */
-    public function consultar($codigo = null, $numero = null, $serie = null, $cadastro = null): string
-    {
+    public function consultar(
+        $codigo = null,
+        $numero = null,
+        $serie = null,
+        $cadastro = null
+    ) {
         $operation = 'consultar';
         $content = "<nfse><pesquisa>";
         if (!empty($codigo)) {
@@ -54,10 +58,10 @@ class Tools extends BaseTools
                . "<serie>$serie</serie>"
                . "<cadastro>$cadastro</cadastro>";
         }
-        $content .= "</pesquisa><nfse>";
+        $content .= "</pesquisa></nfse>";
         return $this->send($content, $operation);
     }
-    
+
     /**
      * Envio de RPS/NFSe e também usado para cancelamento
      * @param RpsInterface $rps
