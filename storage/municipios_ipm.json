@@ -150,15 +150,15 @@
         "sign": true
     },
     "4202057": {
-        "municipio": "BALNEARIO BARRA DO SUL",
+        "municipio": "BARRA DO SUL (BALNEARIO)",
         "uf": "SC",
         "tom": "5549",
         "sign": true
     },
     "4212809": {
-        "municipio": "BALNEARIO PICARRAS",
+        "municipio": "PICARRAS (BALNEARIO)",
         "uf": "SC",
-        "tom": "0000",
+        "tom": "8251",
         "sign": true
     },
     "4202107": {
@@ -312,7 +312,7 @@
         "sign": true
     },
     "4215000": {
-        "municipio": "Rio Negrinho",
+        "municipio": "RIO NEGRINHO",
         "uf": "SC",
         "tom": "8295",
         "sign": true
@@ -321,12 +321,6 @@
         "municipio": "RIO DO SUL",
         "uf": "SC",
         "tom": "8291",
-        "sign": true
-    },
-    "0000000": {
-        "municipio": "RODERIO",
-        "uf": "SC",
-        "tom": "0000",
         "sign": true
     },
     "4215307": {
