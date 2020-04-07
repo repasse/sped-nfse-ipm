@@ -22,4 +22,6 @@ interface RpsInterface
     public function teste($flag = false);
     
     public function sign($flag = false);
+
+    public function config(\stdClass $config);
 }

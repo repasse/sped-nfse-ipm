@@ -73,6 +73,7 @@ class Tools extends BaseTools
         if ($this->config->tpamb > 1 && $this->config->tpamb < 3) {
             $rps->teste(true); //marca xml como teste não será considerado pelo servidor
         }
+        $rps->config($this->config);
         $content = $rps->render();
         //assina se necessário
         if ($this->wsobj->sign) {

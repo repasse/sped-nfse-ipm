@@ -43,19 +43,8 @@ class Tools
     {
         $this->config = json_decode($config);
         $this->certificate = $cert;
-
-        $this->storage = realpath(__DIR__ . '/../../storage');
-        $urls = json_decode(
-            file_get_contents($this->storage . '/municipios_ipm.json'),
-            true
-        );
-        if (empty($urls[$this->config->cmun])) {
-            throw new \Exception(
-                "Esse codigo [{$this->config->cmun}] não pertence a nenhum "
-                . "municipio cadastrado para esse modelo."
-            );
-        }
-        $this->wsobj = json_decode(json_encode($urls[$this->config->cmun]));
+        $this->wsobj = $this->loadWsobj($this->config->cmun);
+        $this->config->tom = $this->wsobj->tom;
         $this->environment = 'homologacao';
         if ($this->config->tpamb === 1) {
             $this->environment = 'producao';
@@ -70,6 +59,22 @@ class Tools
         if (is_file($this->filepath)) {
             unlink($this->filepath);
         }
+    }
+
+    /**
+     * load webservice parameters
+     * @param string $cmun
+     * @return object
+     * @throws \Exception
+     */
+    protected function loadWsobj($cmun)
+    {
+        $path = realpath(__DIR__ . "/../../storage/urls_webservices.json");
+        $urls = json_decode(file_get_contents($path), true);
+        if (empty($urls[$cmun])) {
+            throw new \Exception("Não localizado parâmetros para esse municipio.");
+        }
+        return (object)$urls[$cmun];
     }
 
     /**
@@ -98,7 +103,6 @@ class Tools
     protected function upload($message)
     {
         try {
-            $response = '';
             $this->filepath = $this->saveMessage($message);
             if (function_exists('curl_file_create')) {
                 $cFile = curl_file_create($this->filepath);

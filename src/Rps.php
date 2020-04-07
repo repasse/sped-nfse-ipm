@@ -43,6 +43,10 @@ class Rps implements RpsInterface
      * @var bool
      */
     protected $teste = false;
+    /**
+     * @var \stdClass
+     */
+    protected $config;
 
     /**
      * Constructor
@@ -54,12 +58,24 @@ class Rps implements RpsInterface
     }
 
     /**
+     * Add config
+     * @param \stdClass $config
+     */
+    public function config(\stdClass $config)
+    {
+        $this->config = $config;
+    }
+
+    /**
      * Convert Rps::class data in XML
      * @return string
      */
     public function render()
     {
         $fac = new Factory($this->std, $this->sign, $this->teste);
+        if (!empty($this->config)) {
+            $fac->addConfig($this->config);
+        }
         return $fac->render();
     }
 

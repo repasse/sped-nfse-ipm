@@ -107,8 +107,8 @@ $jsonSchema = '{
             }
         },
         "prestador": {
-            "required": true,
-            "type": "object",
+            "required": false,
+            "type": ["object","null"],
             "properties": {
                 "cpfcnpj": {
                     "required": true,

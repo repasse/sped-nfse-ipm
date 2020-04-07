@@ -36,9 +36,6 @@ try {
 
     echo FakePretty::prettyPrint($response, '');
 
-    //header("Content-type: text/xml");
-    //echo $response;
-
 } catch (\Exception $e) {
     echo $e->getMessage();
 }

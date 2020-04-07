@@ -36,6 +36,10 @@ class Factory
      * @var DOMElement
      */
     protected $rps;
+    /**
+     * @var \stdClass
+     */
+    protected $config;
 
     /**
      * Constructor
@@ -63,6 +67,15 @@ class Factory
                 true
             );
         }
+    }
+
+    /**
+     * Add config
+     * @param \stdClass $config
+     */
+    public function addConfig($config)
+    {
+        $this->config = $config;
     }
 
     /**
@@ -184,18 +197,17 @@ class Factory
         );
         $this->rps->appendChild($node);
 
-        $prestador = $this->std->prestador;
         $node = $this->dom->createElement('prestador');
         $this->dom->addChild(
             $node,
             "cpfcnpj",
-            $prestador->cpfcnpj,
+            $this->config->cnpj,
             true
         );
         $this->dom->addChild(
             $node,
             "cidade",
-            !empty($prestador->cidade) ? $prestador->cidade : null,
+            !empty($this->config->tom) ? $this->config->tom : null,
             false
         );
         $this->rps->appendChild($node);
