@@ -85,6 +85,7 @@ class Tools
      */
     public function send($message, $operation)
     {
+        $this->lastRequest = $message;
         if ($this->config->tpamb !== 3) {
             $response = $this->upload($message);
         } else {
