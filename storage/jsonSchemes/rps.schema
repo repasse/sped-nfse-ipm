@@ -1,1 +1,300 @@
-{    "title": "RPS",    "type": "object",    "properties": {        "identificador": {            "required": false,            "type": ["string","null"],            "pattern": "^.{1,80}$"        },        "rps": {            "required": false,            "type": ["object","null"],            "properties": {                "nro_recibo_provisorio": {                    "required": true,                    "type": "integer",                    "minimum": 1                },                "serie_recibo_provisorio": {                    "required": true,                    "type": "integer",                    "minimum": 1,                    "maximum": 99                },                "data_emissao_recibo_provisorio": {                    "required": true,                    "type": "string",                    "pattern": "^(([1-2][0-9])|([1-9])|(3[0-1]))\/((1[0-2])|([1-9]))\/[0-9]{4}$"                },                "hora_emissao_recibo_provisorio": {                    "required": true,                    "type": "string",                    "pattern": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$"                }            }        },        "pedagio": {            "required": false,            "type": ["object","null"],            "properties": {                "cod_equipamento_automatico": {                    "required": true,                    "type": "string",                    "pattern": "^.{1,100}$"                }            }        },        "nf": {            "required": true,            "type": "object",            "properties": {                "numero": {                    "required": false,                    "type": ["integer","null"],                    "minimum": 1,                    "maximum": 999999999                },                "valor_total": {                    "required": true,                    "type": "number"                },                "valor_desconto": {                    "required": false,                    "type": ["number","null"]                },                "valor_ir": {                    "required": false,                    "type": ["number","null"]                },                "valor_inss": {                    "required": false,                    "type": ["number","null"]                },                "valor_contribuicao_social": {                    "required": false,                    "type": ["number","null"]                },                "valor_rps": {                    "required": false,                    "type": ["number","null"]                },                "valor_pis": {                    "required": false,                    "type": ["number","null"]                },                "valor_cofins": {                    "required": false,                    "type": ["number","null"]                },                "observacao": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,1000}$"                }            }        },        "prestador": {            "required": false,            "type": ["object","null"],            "properties": {                "cpfcnpj": {                    "required": true,                    "type": "string",                    "pattern": "^[0-9]{11,14}$"                },                "cidade": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{4,9}$"                }            }        },        "tomador": {            "required": true,            "type": "object",            "properties": {                "endereco_informado": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^(S|N)$"                },                "tipo": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^(E|F|J)$"                },                "identificador": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{4,20}$"                },                "estado": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,100}$"                },                "pais": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,100}$"                },                "cpfcnpj": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{11,14}$"                },                "ie": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{0,16}$"                },                "nome_razao_social": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,100}$"                },                "sobrenome_nome_fantasia": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,100}$"                },                "logradouro": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,70}$"                },                "email": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,100}$"                },                "numero_residencia": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{1,8}$"                },                "complemento": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{0,50}$"                },                "ponto_referencia": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{0,100}$"                },                "bairro": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^.{0,30}$"                },                "cidade": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{0,9}$"                },                "cep": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{8}$"                },                "ddd_fone_comercial": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{2,3}$"                },                "fone_comercial": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{7,9}$"                },                "ddd_fone_residencial": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{2,3}$"                },                "fone_residencial": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{7,9}$"                },                "ddd_fax": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{2,3}$"                },                "fone_fax": {                    "required": false,                    "type": ["string","null"],                    "pattern": "^[0-9]{7,9}$"                }            }        },        "itens": {            "required": true,            "type": "array",            "minItems": 1,            "maxItems": 100,            "items": {                "type": "object",                "properties": {                    "tributa_municipio_prestador": {                        "required": true,                        "type": "string",                        "pattern": "^(S|N)$"                    },                    "codigo_local_prestacao_servico": {                        "required": true,                        "type": "string",                        "pattern": "^[0-9]{4,9}$"                    },                    "unidade_codigo": {                        "required": false,                        "type": ["string","null"],                        "pattern": "^[0-9]{1,9}$"                    },                    "unidade_quantidade": {                        "required": false,                        "type": ["number","null"]                    },                    "unidade_valor_unitario": {                        "required": false,                        "type": ["number","null"]                    },                    "codigo_item_lista_servico": {                        "required": true,                        "type": "string",                        "pattern": "^[0-9]{3,9}$"                    },                    "descritivo": {                        "required": true,                        "type": "string",                        "pattern": "^.{1,1000}$"                    },                    "aliquota_item_lista_servico": {                        "required": true,                        "type": "number"                    },                    "situacao_tributaria": {                        "required": true,                        "type": "string",                        "pattern": "^[0-9]{1,4}$"                    },                    "valor_tributavel": {                        "required": true,                        "type": "number"                    },                    "valor_deducao": {                        "required": false,                        "type": ["number","null"]                    },                    "valor_issrf": {                        "required": false,                        "type": ["number","null"]                    }                }            }            }    }    }
+{
+    "title": "RPS",
+    "type": "object",
+    "properties": {
+        "identificador": {
+            "required": false,
+            "type": ["string","null"],
+            "pattern": "^.{1,80}$"
+        },
+        "rps": {
+            "required": false,
+            "type": ["object","null"],
+            "properties": {
+                "nro_recibo_provisorio": {
+                    "required": true,
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "serie_recibo_provisorio": {
+                    "required": true,
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "data_emissao_recibo_provisorio": {
+                    "required": true,
+                    "type": "string",
+                    "pattern": "^(([1-2][0-9])|([1-9])|(3[0-1]))\/((1[0-2])|([1-9]))\/[0-9]{4}$"
+                },
+                "hora_emissao_recibo_provisorio": {
+                    "required": true,
+                    "type": "string",
+                    "pattern": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$"
+                }
+            }
+        },
+        "pedagio": {
+            "required": false,
+            "type": ["object","null"],
+            "properties": {
+                "cod_equipamento_automatico": {
+                    "required": true,
+                    "type": "string",
+                    "pattern": "^.{1,100}$"
+                }
+            }
+        },
+        "nf": {
+            "required": true,
+            "type": "object",
+            "properties": {
+                "numero": {
+                    "required": false,
+                    "type": ["integer","null"],
+                    "minimum": 1,
+                    "maximum": 999999999
+                },
+                "valor_total": {
+                    "required": true,
+                    "type": "number"
+                },
+                "valor_desconto": {
+                    "required": false,
+                    "type": ["number","null"]
+                },
+                "valor_ir": {
+                    "required": false,
+                    "type": ["number","null"]
+                },
+                "valor_inss": {
+                    "required": false,
+                    "type": ["number","null"]
+                },
+                "valor_contribuicao_social": {
+                    "required": false,
+                    "type": ["number","null"]
+                },
+                "valor_rps": {
+                    "required": false,
+                    "type": ["number","null"]
+                },
+                "valor_pis": {
+                    "required": false,
+                    "type": ["number","null"]
+                },
+                "valor_cofins": {
+                    "required": false,
+                    "type": ["number","null"]
+                },
+                "observacao": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,1000}$"
+                }
+            }
+        },
+        "prestador": {
+            "required": true,
+            "type": "object",
+            "properties": {
+                "cpfcnpj": {
+                    "required": true,
+                    "type": "string",
+                    "pattern": "^[0-9]{11,14}$"
+                },
+                "cidade": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{4,9}$"
+                }
+            }
+        },
+        "tomador": {
+            "required": true,
+            "type": "object",
+            "properties": {
+                "endereco_informado": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^(S|N)$"
+                },
+                "tipo": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^(E|F|J)$"
+                },
+                "identificador": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{4,20}$"
+                },
+                "estado": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,100}$"
+                },
+                "pais": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,100}$"
+                },
+                "cpfcnpj": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{11,14}$"
+                },
+                "ie": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{0,16}$"
+                },
+                "nome_razao_social": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,100}$"
+                },
+                "sobrenome_nome_fantasia": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,100}$"
+                },
+                "logradouro": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,70}$"
+                },
+                "email": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,100}$"
+                },
+                "numero_residencia": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{1,8}$"
+                },
+                "complemento": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{0,50}$"
+                },
+                "ponto_referencia": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{0,100}$"
+                },
+                "bairro": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^.{0,30}$"
+                },
+                "cidade": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{0,9}$"
+                },
+                "cep": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{8}$"
+                },
+                "ddd_fone_comercial": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{2,3}$"
+                },
+                "fone_comercial": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{7,9}$"
+                },
+                "ddd_fone_residencial": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{2,3}$"
+                },
+                "fone_residencial": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{7,9}$"
+                },
+                "ddd_fax": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{2,3}$"
+                },
+                "fone_fax": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "pattern": "^[0-9]{7,9}$"
+                }
+            }
+        },
+        "itens": {
+            "required": true,
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 100,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "tributa_municipio_prestador": {
+                        "required": true,
+                        "type": "string",
+                        "pattern": "^(S|N)$"
+                    },
+                    "codigo_local_prestacao_servico": {
+                        "required": true,
+                        "type": "string",
+                        "pattern": "^[0-9]{4,9}$"
+                    },
+                    "unidade_codigo": {
+                        "required": false,
+                        "type": ["string","null"],
+                        "pattern": "^[0-9]{1,9}$"
+                    },
+                    "unidade_quantidade": {
+                        "required": false,
+                        "type": ["number","null"]
+                    },
+                    "unidade_valor_unitario": {
+                        "required": false,
+                        "type": ["number","null"]
+                    },
+                    "codigo_item_lista_servico": {
+                        "required": true,
+                        "type": "string",
+                        "pattern": "^[0-9]{3,9}$"
+                    },
+                    "descritivo": {
+                        "required": true,
+                        "type": "string",
+                        "pattern": "^.{1,1000}$"
+                    },
+                    "aliquota_item_lista_servico": {
+                        "required": true,
+                        "type": "number"
+                    },
+                    "situacao_tributaria": {
+                        "required": true,
+                        "type": "string",
+                        "pattern": "^[0-9]{1,4}$"
+                    },
+                    "valor_tributavel": {
+                        "required": true,
+                        "type": "number"
+                    },
+                    "valor_deducao": {
+                        "required": false,
+                        "type": ["number","null"]
+                    },
+                    "valor_issrf": {
+                        "required": false,
+                        "type": ["number","null"]
+                    }
+                }
+            }    
+        }
+    }    
+}
