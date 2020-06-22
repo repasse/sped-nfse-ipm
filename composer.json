@@ -23,6 +23,7 @@
         "ext-json": "*",
         "ext-simplexml": "*",
         "ext-libxml": "*",
+        "ext-curl": "*",
         "robrichards/xmlseclibs": "^3.0"
     },
     "require-dev": {
