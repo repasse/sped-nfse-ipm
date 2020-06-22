@@ -1,5 +1,5 @@
 {
-    "name": "nfephp-org/sped-nfse-ipm",
+    "name": "repasse/sped-nfse-ipm",
     "type": "library",
     "description": "API para geração e comunicação de RPS e NFSe no padão IPM.",
     "keywords": ["nfe","nfse","sped","nfephp"],
