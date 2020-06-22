@@ -1,85 +1,1 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<nfse>
-  <!-- <nfse_teste>1</nfse_teste> -->
-  <nf>
-    <valor_total>100,00</valor_total>
-    <valor_desconto>0,00</valor_desconto>
-    <valor_ir>0,00</valor_ir>
-    <valor_inss>0,00</valor_inss>
-    <valor_contribuicao_social>0,00</valor_contribuicao_social>
-    <observacao>Observação da NFS-e</observacao>
-  </nf>
-  <prestador>
-    <cpfcnpj>10748524000119</cpfcnpj>
-    <cidade>9985</cidade>
-  </prestador>
-  <tomador>
-    <tipo>E</tipo>
-
-    <identificador>202</identificador>
-    <nome_razao_social>Estrangeiro Teste</nome_razao_social>
-    <cidade>cidade B</cidade>
-    <estado>estado</estado>
-    <pais>Pais D</pais>
-
-    <cpfcnpj>7777777777</cpfcnpj>
-    <ie></ie>
-    <logradouro>R VERBO DIVINO</logradouro>
-    <email>emial@dominio.com.br</email>
-    <numero_residencia>1547</numero_residencia>
-    <complemento></complemento>
-    <ponto_referencia></ponto_referencia>
-    <bairro></bairro>
-    <cep></cep>
-    <ddd_fone_comercial></ddd_fone_comercial>
-    <fone_comercial></fone_comercial>
-    <ddd_fone_residencial></ddd_fone_residencial>
-    <fone_residencial></fone_residencial>
-    <ddd_fax></ddd_fax>
-    <fone_fax></fone_fax>
-  </tomador>
-
-  <itens>
-    <lista>
-      <tributa_municipio_prestador>S</tributa_municipio_prestador>
-      <codigo_local_prestacao_servico>9985</codigo_local_prestacao_servico>
-      <codigo_item_lista_servico>2001</codigo_item_lista_servico>
-      <descritivo>Servicos discriminados abaixo</descritivo>
-      <aliquota_item_lista_servico>5,00</aliquota_item_lista_servico>
-      <situacao_tributaria>0</situacao_tributaria>
-      <valor_tributavel>100,00</valor_tributavel>
-      <valor_deducao>0,00</valor_deducao>
-      <valor_issrf>0,00</valor_issrf>
-    </lista>
-  </itens>
-  <genericos>
-    <linha>
-      <titulo>TITULO DO CONTEÚDO HTML</titulo>
-      <descricao>
-         &amp;lt;table width=&quot;875&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&amp;gt;
-         &amp;lt;tr&amp;gt;
-           &amp;lt;td width=&quot;99&quot;&amp;gt;C&amp;oacute;digo&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;454&quot;&amp;gt;Descri&amp;ccedil;&amp;atilde;o&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;98&quot; align=&quot;right&quot;&amp;gt;Valor Unit&amp;aacute;rio&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;87&quot; align=&quot;right&quot;&amp;gt;Quantidade&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;127&quot; align=&quot;right&quot;&amp;gt;Valor Total&amp;lt;/td&amp;gt;
-         &amp;lt;/tr&amp;gt;
-         &amp;lt;tr&amp;gt;
-           &amp;lt;td width=&quot;99&quot;&amp;gt;123456&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;454&quot;&amp;gt;CONTEUDO 1&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;98&quot; align=&quot;right&quot;&amp;gt;25,00&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;87&quot; align=&quot;right&quot;&amp;gt;3&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;127&quot; align=&quot;right&quot;&amp;gt;75,00&amp;lt;/td&amp;gt;
-         &amp;lt;/tr&amp;gt;
-         &amp;lt;tr&amp;gt;
-           &amp;lt;td width=&quot;99&quot;&amp;gt;123457&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;454&quot;&amp;gt;CONTEUDO 2&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;98&quot; align=&quot;right&quot;&amp;gt;25,00&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;87&quot; align=&quot;right&quot;&amp;gt;1&amp;lt;/td&amp;gt;
-           &amp;lt;td width=&quot;127&quot; align=&quot;right&quot;&amp;gt;25,00&amp;lt;/td&amp;gt;
-         &amp;lt;/tr&amp;gt;
-       &amp;lt;/table&amp;gt;
-     </descricao>
-    </linha>
-  </genericos>
-</nfse>
+<?xml version="1.0" encoding="ISO-8859-1"?><nfse>  <!-- <nfse_teste>1</nfse_teste> -->  <nf>    <valor_total>100,00</valor_total>    <valor_desconto>0,00</valor_desconto>    <valor_ir>0,00</valor_ir>    <valor_inss>0,00</valor_inss>    <valor_contribuicao_social>0,00</valor_contribuicao_social>    <observacao>Observação da NFS-e</observacao>  </nf>  <prestador>    <cpfcnpj>10748524000119</cpfcnpj>    <cidade>9985</cidade>  </prestador>  <tomador>    <tipo>E</tipo>    <identificador>202</identificador>    <nome_razao_social>Estrangeiro Teste</nome_razao_social>    <cidade>cidade B</cidade>    <estado>estado</estado>    <pais>Pais D</pais>    <cpfcnpj>7777777777</cpfcnpj>    <ie></ie>    <logradouro>R VERBO DIVINO</logradouro>    <email>emial@dominio.com.br</email>    <numero_residencia>1547</numero_residencia>    <complemento></complemento>    <ponto_referencia></ponto_referencia>    <bairro></bairro>    <cep></cep>    <ddd_fone_comercial></ddd_fone_comercial>    <fone_comercial></fone_comercial>    <ddd_fone_residencial></ddd_fone_residencial>    <fone_residencial></fone_residencial>    <ddd_fax></ddd_fax>    <fone_fax></fone_fax>  </tomador>  <itens>    <lista>      <tributa_municipio_prestador>S</tributa_municipio_prestador>      <codigo_local_prestacao_servico>9985</codigo_local_prestacao_servico>      <codigo_item_lista_servico>2001</codigo_item_lista_servico>      <descritivo>Servicos discriminados abaixo</descritivo>      <aliquota_item_lista_servico>5,00</aliquota_item_lista_servico>      <situacao_tributaria>0</situacao_tributaria>      <valor_tributavel>100,00</valor_tributavel>      <valor_deducao>0,00</valor_deducao>      <valor_issrf>0,00</valor_issrf>    </lista>  </itens>  <genericos>    <linha>      <titulo>TITULO DO CONTEÚDO HTML</titulo>      <descricao>         &amp;lt;table width=&quot;875&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&amp;gt;         &amp;lt;tr&amp;gt;           &amp;lt;td width=&quot;99&quot;&amp;gt;C&amp;oacute;digo&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;454&quot;&amp;gt;Descri&amp;ccedil;&amp;atilde;o&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;98&quot; align=&quot;right&quot;&amp;gt;Valor Unit&amp;aacute;rio&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;87&quot; align=&quot;right&quot;&amp;gt;Quantidade&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;127&quot; align=&quot;right&quot;&amp;gt;Valor Total&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;           &amp;lt;td width=&quot;99&quot;&amp;gt;123456&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;454&quot;&amp;gt;CONTEUDO 1&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;98&quot; align=&quot;right&quot;&amp;gt;25,00&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;87&quot; align=&quot;right&quot;&amp;gt;3&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;127&quot; align=&quot;right&quot;&amp;gt;75,00&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;           &amp;lt;td width=&quot;99&quot;&amp;gt;123457&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;454&quot;&amp;gt;CONTEUDO 2&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;98&quot; align=&quot;right&quot;&amp;gt;25,00&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;87&quot; align=&quot;right&quot;&amp;gt;1&amp;lt;/td&amp;gt;           &amp;lt;td width=&quot;127&quot; align=&quot;right&quot;&amp;gt;25,00&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;       &amp;lt;/table&amp;gt;     </descricao>    </linha>  </genericos></nfse>
